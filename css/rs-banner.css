@@ -1,0 +1,193 @@
+.rs-banner {
+  margin: 48px 0px;
+  position: relative;
+}
+@media (max-width: 1920px) {
+  .rs-banner {
+    margin: calc(20px + 28 * (100vw - 320px) / 1600) 0px;
+  }
+}
+@media (min-width: 769px) {
+  .rs-banner {
+    height: 251px;
+  }
+}
+@media (max-width: 768px) {
+  .rs-banner {
+    height: 402px;
+  }
+}
+@media (min-width: 769px) {
+  .rs-banner.rs-banner-reverse .rs-banner__description {
+    margin: 0px 0px 0px auto;
+  }
+}
+.rs-banner__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.rs-banner__img {
+  width: 100%;
+  height: 100%;
+}
+.rs-banner__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .rs-banner__img img.rs-banner__bg-desktop {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .rs-banner__img img.rs-banner__bg-mobile {
+    display: none;
+  }
+}
+.rs-banner__prlx {
+  position: absolute;
+  z-index: 10;
+}
+.rs-banner__prlx img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.rs-banner__prlx.rs-banner__prlx-1 {
+  width: 200px;
+  height: 197px;
+}
+@media (min-width: 769px) {
+  .rs-banner__prlx.rs-banner__prlx-1 {
+    top: 3%;
+    right: 43.2%;
+  }
+}
+@media (max-width: 768px) {
+  .rs-banner__prlx.rs-banner__prlx-1 {
+    bottom: 182px;
+    left: 11px;
+  }
+}
+@media (max-width: 1920px) {
+  .rs-banner__prlx.rs-banner__prlx-1 {
+    width: calc(83px + 117 * (100vw - 320px) / 1600);
+    height: calc(82px + 115 * (100vw - 320px) / 1600);
+  }
+}
+.rs-banner__prlx.rs-banner__prlx-2 {
+  width: 80px;
+  height: 79px;
+}
+@media (min-width: 769px) {
+  .rs-banner__prlx.rs-banner__prlx-2 {
+    bottom: 23%;
+    right: 1%;
+  }
+}
+@media (max-width: 768px) {
+  .rs-banner__prlx.rs-banner__prlx-2 {
+    bottom: 98px;
+    right: 6px;
+  }
+}
+@media (max-width: 1920px) {
+  .rs-banner__prlx.rs-banner__prlx-2 {
+    width: calc(43px + 37 * (100vw - 320px) / 1600);
+    height: calc(42px + 37 * (100vw - 320px) / 1600);
+  }
+}
+.rs-banner__prlx.rs-banner__prlx-3 {
+  width: 119px;
+  height: 119px;
+}
+@media (min-width: 769px) {
+  .rs-banner__prlx.rs-banner__prlx-3 {
+    left: 2.7%;
+    top: 3%;
+  }
+}
+@media (max-width: 768px) {
+  .rs-banner__prlx.rs-banner__prlx-3 {
+    bottom: 190px;
+    left: 16px;
+  }
+}
+@media (max-width: 1920px) {
+  .rs-banner__prlx.rs-banner__prlx-3 {
+    width: calc(58px + 61 * (100vw - 320px) / 1600);
+    height: calc(49px + 70 * (100vw - 320px) / 1600);
+  }
+}
+.rs-banner__prlx.rs-banner__prlx-4 {
+  width: 98px;
+  height: 98px;
+}
+@media (min-width: 769px) {
+  .rs-banner__prlx.rs-banner__prlx-4 {
+    left: 39.6%;
+    top: 22%;
+  }
+}
+@media (max-width: 768px) {
+  .rs-banner__prlx.rs-banner__prlx-4 {
+    bottom: 156px;
+    right: 16px;
+  }
+}
+@media (max-width: 1920px) {
+  .rs-banner__prlx.rs-banner__prlx-4 {
+    width: calc(53px + 45 * (100vw - 320px) / 1600);
+    height: calc(53px + 45 * (100vw - 320px) / 1600);
+  }
+}
+.rs-banner__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  max-width: 540px;
+  padding: 40px 60px;
+  color: #fff;
+}
+@media (max-width: 1920px) {
+  .rs-banner__description {
+    padding: calc(20px + 20 * (100vw - 320px) / 1600) calc(20px + 40 * (100vw - 320px) / 1600);
+    max-width: calc(240px + 300 * (100vw - 320px) / 1600);
+  }
+}
+@media (max-width: 768px) {
+  .rs-banner__description {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    max-width: 100%;
+  }
+}
+.rs-banner__description p {
+  margin-top: 12px;
+}
+@media (max-width: 1920px) {
+  .rs-banner__description p {
+    margin-top: calc(10px + 2 * (100vw - 320px) / 1600);
+  }
+}

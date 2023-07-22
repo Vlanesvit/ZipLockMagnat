@@ -1,0 +1,257 @@
+.rs-slider {
+	width: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+	margin-bottom: 56px;
+
+	@media (max-width: 992px) {
+		// max-width: 768px;
+		margin: 0 auto 20px;
+	}
+
+	// .rs-slider__slider
+	&__slider {
+		width: 100%;
+		position: relative;
+	}
+
+	// .rs-slider__swiper
+	&__swiper {
+		width: 100%;
+	}
+
+	// .rs-slider__slide
+	&__slide {
+		width: 100%;
+		min-height: 465px;
+		opacity: 0 !important;
+		visibility: hidden !important;
+		position: relative;
+		z-index: 0;
+
+		@media (max-width: 992px) {
+			min-height: 550px;
+		}
+
+		&.swiper-slide-active {
+			z-index: 1;
+			opacity: 1 !important;
+			visibility: visible !important;
+
+			.rs-slider__description {
+				h2 {
+					animation: customFadeInLeft 1s both;
+				}
+			}
+
+			.rs-slider__list {
+				ul {
+					li {
+						animation: customFadeInLeft 1s both;
+					}
+				}
+			}
+
+			.rs-slider__button {
+				animation: customFadeInLeft 1s both 0.5s;
+			}
+		}
+
+		&.rs-slider__slide-inversion {
+			color: #fff;
+
+			.rs-slider__list ul li span:after {
+				background-color: #fff;
+			}
+		}
+	}
+
+	// .rs-slider__item
+	&__item {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	// .rs-slider__bg
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+			&.rs-slider__bg-desktop {
+				@media (max-width: 992px) {
+					display: none;
+				}
+			}
+
+			&.rs-slider__bg-mobile {
+				@media (min-width: 993px) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// .rs-slider__description
+	&__description {
+		padding: 60px 70px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		@media (max-width: 1920px) {
+			padding: calc(66px + (70 - 66) * ((100vw - 320px) / (1920 - 320)))
+				calc(26px + (70 - 26) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@media (min-width: 993px) {
+			justify-content: center;
+			max-width: 564px;
+			margin: 0px 0px 0px auto;
+
+			@media (max-width: 1920px) {
+				max-width: calc(400px + (564 - 400) * ((100vw - 992px) / (1920 - 992)));
+			}
+		}
+
+		@media (max-width: 992px) {
+			justify-content: flex-end;
+		}
+	}
+
+	&__button {
+		text-align: right;
+		.rs-btn {
+			margin-top: 20px;
+		}
+
+		.hint {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 21px;
+			font-feature-settings: "pnum" on, "lnum" on;
+			color: rgba(255, 255, 255, 0.5);
+			margin-top: 5px;
+		}
+	}
+
+	// .rs-slider__list
+	&__list {
+		margin-top: 32px;
+
+		ul {
+			li {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 26px;
+				font-feature-settings: "pnum" on, "lnum" on;
+				position: relative;
+				z-index: 1;
+
+				$i: 1;
+				@while $i < 5 {
+					&:nth-child(#{$i}) {
+						animation-delay: $i / 5 + s !important;
+					}
+					$i: $i + 1;
+				}
+
+				@media (max-width: 1920px) {
+					font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (1920 - 320)));
+					line-height: calc(21px + (26 - 21) * ((100vw - 320px) / (1920 - 320)));
+				}
+
+				&:not(:last-child) {
+					margin-bottom: 25px;
+
+					@media (max-width: 1920px) {
+						margin-bottom: calc(10px + (25 - 10) * ((100vw - 320px) / (1920 - 320)));
+					}
+				}
+
+				span {
+					position: relative;
+
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: -4px;
+						left: 0;
+						display: block;
+						width: 100%;
+						height: 2px;
+						background-color: #7e5ddd;
+					}
+				}
+
+				h3 {
+					margin-top: 8px;
+				}
+
+				p {
+					font-style: normal;
+					font-weight: 600;
+					font-size: 12px;
+					line-height: 17px;
+					letter-spacing: 0.12em;
+					text-transform: uppercase;
+					font-feature-settings: "pnum" on, "lnum" on;
+					color: #6d758d;
+					position: relative;
+					margin-top: -15px;
+					z-index: -1;
+				}
+			}
+		}
+	}
+
+	&__pagination {
+		&.rs-slider__pagination-inversion {
+			.swiper-pagination-bullet {
+				border: 2px solid #fff;
+
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: #fff;
+					}
+				}
+			}
+
+			.swiper-pagination-bullet-active {
+				background-color: #fff;
+			}
+		}
+	}
+
+	&__navigation {
+		&.rs-slider__navigation-inversion {
+			.swiper-button-next,
+			.swiper-button-prev {
+				color: #fff;
+			}
+		}
+	}
+}
+
+@keyframes customFadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(20%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}

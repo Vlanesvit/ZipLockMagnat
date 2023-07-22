@@ -1,0 +1,31 @@
+.rs-main-content {
+	margin-top: 24px;
+
+	// .rs-main-content__container
+	&__container {
+	}
+
+	// .rs-main-content__wrapper
+	&__wrapper {
+		@media (min-width: 993px) {
+			display: grid;
+			grid-template-columns: 20.264% 1fr;
+			gap: 24px;
+
+			@media (max-width: 1920px) {
+				gap: calc(15px + (24 - 15) * ((100vw - 992px) / (1920 - 992)));
+			}
+		}
+	}
+
+	// .rs-main-content__sidebar
+	&__sidebar {
+	}
+
+	// .rs-main-content__block
+	&__block {
+		@media (min-width: 993px) {
+			overflow: hidden;
+		}
+	}
+}
