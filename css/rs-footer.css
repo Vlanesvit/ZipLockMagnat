@@ -264,7 +264,6 @@
 }
 .rs-footer__touch ul li a {
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 @media (any-hover: hover) {
@@ -293,10 +292,12 @@
   margin-left: 10px;
   padding-bottom: 3px;
   border-bottom: 1px solid #b5b5b9;
+  -webkit-transition: border 0.3s ease 0s;
+  transition: border 0.3s ease 0s;
 }
 @media (any-hover: hover) {
   .rs-footer__copyright p a:hover {
-    border: none;
+    border-bottom: 1px solid transparent;
   }
 }
 .rs-footer__copyright p:not(:last-child) {
@@ -340,7 +341,6 @@
   -webkit-font-feature-settings: "pnum" on, "lnum" on;
           font-feature-settings: "pnum" on, "lnum" on;
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 @media (any-hover: hover) {

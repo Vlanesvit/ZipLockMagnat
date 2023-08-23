@@ -56,7 +56,6 @@
           justify-content: center;
   color: inherit;
   -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   color: #1a1a1f;
 }

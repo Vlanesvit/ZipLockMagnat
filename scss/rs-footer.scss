@@ -299,10 +299,11 @@
 				margin-left: 10px;
 				padding-bottom: 3px;
 				border-bottom: 1px solid #b5b5b9;
+				transition: border 0.3s ease 0s;
 
 				@media (any-hover: hover) {
 					&:hover {
-						border: none;
+						border-bottom: 1px solid transparent;
 					}
 				}
 			}

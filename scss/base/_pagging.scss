@@ -1,0 +1,149 @@
+.pagging {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 64px;
+
+	@media (max-width: 991.98px) {
+		margin-top: 30px;
+	}
+
+	&.search-pagging {
+		@media (max-width: 767.98px) {
+			justify-content: flex-start;
+		}
+
+		.pagging__arrow {
+			color: var(--gray-color);
+
+			&.pagging__arrow_left {
+				margin-right: 10px;
+			}
+
+			&.pagging__arrow_right {
+				margin-left: 10px;
+			}
+
+			&.pagging__arrow_start {
+				margin-right: 10px;
+				color: var(--primary-color);
+				padding-bottom: 2px;
+				border-bottom: 1px solid var(--primary-color);
+
+				@media (max-width: 767.98px) {
+					display: none;
+				}
+			}
+
+			&.pagging__arrow_end {
+				margin-left: 10px;
+				color: var(--primary-color);
+				padding-bottom: 2px;
+				border-bottom: 1px solid var(--primary-color);
+
+				@media (max-width: 767.98px) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// .pagging__arrow
+	&__arrow {
+		transition: all 0.3s ease 0s;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: #1a1a1f;
+
+		&::before {
+			font-size: 32px;
+
+			@media (max-width: 991.98px) {
+				font-size: 20px;
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #7e5ddd;
+			}
+		}
+
+		&.pagging__arrow_left {
+			margin-right: 16px;
+
+			@media (max-width: 991.98px) {
+				margin-right: 4px;
+			}
+		}
+
+		&.pagging__arrow_right {
+			margin-left: 16px;
+
+			@media (max-width: 991.98px) {
+				margin-left: 4px;
+			}
+		}
+
+		&:disabled {
+			pointer-events: none;
+			color: #e5e8ed;
+			cursor: default;
+		}
+	}
+
+	// .pagging__list
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+
+	// .pagging__item
+	&__item {
+		&:not(:last-child) {
+			margin-right: 16px;
+
+			@media (max-width: 991.98px) {
+				margin-right: 4px;
+			}
+		}
+	}
+
+	// .pagging__link
+	&__link {
+		padding: 4px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		transition: all 0.3s ease 0s;
+		background-color: transparent;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 160%; /* 25.6px */
+		min-width: 38px;
+		min-height: 38px;
+		color: #1a1a1f;
+
+		@media (max-width: 991.98px) {
+			font-size: 12px;
+			min-width: 30px;
+			min-height: 30px;
+		}
+
+		&._active {
+			color: #fff;
+			background-color: #7e5ddd;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: #7e5ddd;
+			}
+		}
+	}
+}

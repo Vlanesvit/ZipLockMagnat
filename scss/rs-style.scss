@@ -15,8 +15,8 @@ $fontFamily: "Nunito";
 $fontSize: 14px;
 
 // Основные цвета
-$accentColor: #7E5DDD;
-$fontColor: #1A1A1F;
+$accentColor: #7e5ddd;
+$fontColor: #1a1a1f;
 $bgColor: #fff;
 
 // Минимальная ширина страницы
@@ -90,14 +90,13 @@ body {
 
 // Подключение стилей отдельных элементов ======================================================================================================================================================================================================================
 @import "./base/_common";
-
 @import "./base/_swiper";
+@import "./base/_pagging";
+@import "./base/_breadcrumbs";
 // @import "./base/_datepicker";
 // @import "./base/_light-gallery";
-
 // @import "./base/_spollers";
 // @import "./base/_tabs";
-// @import "./base/_pagging";
 // @import "./base/_select";
 // @import "./base/_custom-cursor";
 // @import "./base/_modal";

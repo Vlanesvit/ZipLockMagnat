@@ -3,7 +3,6 @@
   border-radius: 8px;
   padding: 22px 15px;
   -webkit-transition: margin 0.5s ease 0s;
-  -o-transition: margin 0.5s ease 0s;
   transition: margin 0.5s ease 0s;
 }
 @media (max-width: 992px) {
@@ -90,7 +89,6 @@
 }
 .rs-news__description h6 {
   -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 .rs-news__description p {
