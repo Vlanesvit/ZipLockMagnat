@@ -45,7 +45,7 @@
 			border-color: #000000;
 
 			i {
-				&.spollers__icon--arrow {
+				&.spollers__rs-icon--arrow {
 					&::before {
 						transform: rotate(180deg);
 					}
@@ -82,8 +82,8 @@
 		}
 	}
 
-	// .spollers__icon--arrow
-	&__icon--arrow {
+	// .spollers__rs-icon--arrow
+	&__rs-icon--arrow {
 		&:before {
 			font-size: 5px;
 

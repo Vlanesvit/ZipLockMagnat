@@ -1,63 +1,83 @@
-._icon-cart:before {
-	content: "\e900";
+._rs-icon-calendar:before {
+	content: "\e908";
+	color: #7e5ddd;
+}
+._rs-icon-cart:before {
+	content: "\e909";
 	color: #fff;
 }
-._icon-contact:before {
-	content: "\e901";
+._rs-icon-chack-regular:before {
+	content: "\e90a";
+	color: #7e5ddd;
+}
+._rs-icon-check-bold:before {
+	content: "\e90b";
+	color: #dd017f;
+}
+._rs-icon-contact:before {
+	content: "\e90c";
 	color: #f6eca2;
 }
-._icon-fav:before {
-	content: "\e902";
+._rs-icon-copy:before {
+	content: "\e90d";
+	color: #7e5ddd;
+}
+._rs-icon-fav:before {
+	content: "\e90e";
 	color: #fff;
 }
-._icon-list_arrow-down:before {
-	content: "\e903";
+._rs-icon-fav-fill:before {
+	content: "\e90f";
+	color: #ff4757;
+}
+._rs-icon-filter:before {
+	content: "\e910";
+	color: #7e5ddd;
+}
+._rs-icon-list_arrow-down:before {
+	content: "\e912";
 	color: #fff;
 }
-._icon-list_arrow-right:before {
-	content: "\e903";
+._rs-icon-list_arrow-down:before {
+	content: "\e912";
+
 	transform: rotate(90deg);
 	color: #b9b9b9;
 }
-._icon-procent:before {
-	content: "\e904";
+._rs-icon-procent:before {
+	content: "\e917";
 	color: #ef262c;
 }
-._icon-search:before {
-	content: "\e905";
+._rs-icon-question:before {
+	content: "\e918";
+	color: #ffa538;
+}
+._rs-icon-search:before {
+	content: "\e919";
 	color: #6d758d;
 }
-._icon-slider_arrow-left:before {
-	content: "\e906";
+._rs-icon-slider_arrow-left:before {
+	content: "\e91a";
 }
-._icon-slider_arrow-right:before {
-	content: "\e907";
+._rs-icon-slider_arrow-right:before {
+	content: "\e91b";
 }
-._icon-stars:before {
-	content: "\e908";
+._rs-icon-stars:before {
+	content: "\e91c";
 	color: #f6eca2;
 }
-._icon-telegram:before {
-	content: "\e909";
-	color: #039be5;
+._rs-icon-upload:before {
+	content: "\e921";
+	color: #7e5ddd;
 }
-._icon-user:before {
-	content: "\e90a";
+._rs-icon-user:before {
+	content: "\e922";
 	color: #fff;
 }
-._icon-vk:before {
-	content: "\e90b";
-	color: #07f;
+._rs-icon-warning:before {
+	content: "\e924";
+	color: #b39d00;
 }
-._icon-whatsapp:before {
-	content: "\e90d";
-	color: rgb(76, 175, 80);
-}
-._icon-whatsapp:after {
-	content: "\e90e";
-	margin-left: -1em;
-	color: rgb(250, 250, 250);
-}
-._icon-close:before {
-	content: "\e90c";
+._rs-icon-close:before {
+	content: "\e911";
 }

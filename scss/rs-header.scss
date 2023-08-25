@@ -276,7 +276,7 @@ header {
 							transition: transform 0.3s ease 0s;
 
 							&::before {
-								content: "\e903";
+								content: "\e912";
 								font-family: "icons" !important;
 								speak: never;
 								font-style: normal;
@@ -1030,7 +1030,7 @@ header {
 		}
 
 		&::after {
-			content: "\e903";
+			content: "\e912";
 			font-family: "icons" !important;
 			speak: never;
 			font-style: normal;
@@ -1116,7 +1116,7 @@ header {
 					transition: transform 0.3s ease 0s;
 
 					&::after {
-						content: "\e903";
+						content: "\e912";
 
 						font-family: "icons" !important;
 						speak: never;

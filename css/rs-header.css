@@ -308,7 +308,7 @@
     transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   }
   .rs-header .menu__list li a i::before {
-    content: "\e903";
+    content: "\e912";
     font-family: "icons" !important;
     speak: never;
     font-style: normal;
@@ -1088,7 +1088,7 @@
   }
 }
 .menu-catalog__icon::after {
-  content: "\e903";
+  content: "\e912";
   font-family: "icons" !important;
   speak: never;
   font-style: normal;
@@ -1178,7 +1178,7 @@
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 .menu-catalog__list li a i::after {
-  content: "\e903";
+  content: "\e912";
   font-family: "icons" !important;
   speak: never;
   font-style: normal;

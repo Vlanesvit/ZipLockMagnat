@@ -14,7 +14,7 @@
 		height: calc(402px + (600 - 402) * ((100vw - 320px) / (1920 - 320)));
 	}
 
-	.temp-page & {
+	.inner-page & {
 		margin: 45px 0px 40px;
 
 		@media (max-width: 1169.98px) {
@@ -51,6 +51,29 @@
 					@media (max-width: 1920px) {
 						margin-top: calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320)));
 					}
+				}
+			}
+		}
+
+		&.rs-banner-small {
+			height: 269px;
+
+			.rs-btn {
+				margin-top: 24px;
+
+				@media (max-width: 1920px) {
+					margin-top: calc(15px + (24 - 15) * ((100vw - 320px) / (1920 - 320)));
+				}
+			}
+
+			.rs-banner__description {
+				max-width: 595px;
+				padding-top: 40px;
+				padding-bottom: 40px;
+
+				@media (max-width: 1920px) {
+					padding-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+					padding-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
 				}
 			}
 		}
@@ -269,6 +292,26 @@
 			@media (max-width: 1920px) {
 				width: calc(53px + (98 - 53) * ((100vw - 320px) / (1920 - 320)));
 				height: calc(53px + (98 - 53) * ((100vw - 320px) / (1920 - 320)));
+			}
+		}
+
+		&.rs-banner__prlx-5 {
+			width: 127px;
+			height: 127px;
+
+			@media (min-width: 769px) {
+				top: 3%;
+				right: 43.2%;
+			}
+
+			@media (max-width: 768px) {
+				bottom: 130px;
+				left: 11px;
+			}
+
+			@media (max-width: 1920px) {
+				width: calc(58px + (127 - 58) * ((100vw - 320px) / (1920 - 320)));
+				height: calc(49px + (127 - 49) * ((100vw - 320px) / (1920 - 320)));
 			}
 		}
 	}

@@ -1,0 +1,250 @@
+.rs-calc {
+  margin: 88px 0px 30px;
+}
+.rs-calc__container .line-title {
+  margin-bottom: 16px;
+}
+.rs-calc__container > h2 {
+  text-align: center;
+}
+.rs-calc__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 54px;
+}
+.rs-calc__filter .tabs {
+  margin-top: 10px;
+}
+.rs-calc__filter .tabs__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.rs-calc__filter .tabs__title {
+  width: 100%;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #ece7fa;
+  color: #7e5ddd;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.rs-calc__filter .tabs__title._tab-active {
+  color: #fff;
+  background: #7e5ddd;
+}
+.rs-calc__filter .tabs__title:not(:last-child) {
+  margin-right: 10px;
+}
+.rs-calc__filter .tabs__body {
+  margin-top: 20px;
+}
+.rs-calc__filter_item:not(:last-child) {
+  margin-bottom: 18px;
+}
+.rs-calc__filter_item .radio-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1px -6px -6px;
+}
+.rs-calc__filter_item .radio-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+  margin: 6px;
+}
+.rs-calc__filter_item .radio-list li input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  font-size: 0px;
+  cursor: pointer;
+}
+.rs-calc__filter_item .radio-list li input:checked ~ .radio-label {
+  background-color: #7e5ddd;
+  color: #fff;
+}
+.rs-calc__filter_item .radio-list li .radio-label {
+  padding: 5px 9px;
+  background-color: #f3f6fb;
+  border-radius: 8px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #1a1a1f;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+}
+.rs-calc__filter_item .checkbox-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -8px -15px -15px;
+}
+.rs-calc__filter_item .checkbox-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+  margin: 15px;
+}
+.rs-calc__filter_item .checkbox-list li input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  font-size: 0px;
+  cursor: pointer;
+  z-index: 100;
+}
+.rs-calc__filter_item .checkbox-list li input:checked ~ .checkbox::after {
+  opacity: 1;
+  visibility: visible;
+}
+.rs-calc__filter_item .checkbox-list li .checkbox {
+  display: block;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  min-height: 20px;
+  min-width: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: all 0.3s ease 0s;
+}
+.rs-calc__filter_item .checkbox-list li .checkbox::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 2px solid #7e5ddd;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 6px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.rs-calc__filter_item .checkbox-list li .checkbox.black {
+  background-color: #000;
+}
+.rs-calc__filter_item .checkbox-list li .checkbox.matte {
+  background-color: #ebebeb;
+}
+.rs-calc__filter_item .checkbox-list li .checkbox.half-black {
+  background-color: #828282;
+}
+.rs-calc__filter_item .checkbox-list li .checkbox.white {
+  background-color: #fff;
+  border: 1px solid #c9cfda;
+}
+.rs-calc__filter_item .checkbox-list li .checkbox.black-with-ring {
+  background-color: #000;
+}
+.rs-calc__filter_item .checkbox-list li .checkbox-label {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  margin-left: 8px;
+}
+.rs-calc__result {
+  padding: 29px 48px 0px 38px;
+  width: 100%;
+}
+.rs-calc__result_block {
+  width: 100%;
+  padding: 27px;
+  border-radius: 50%;
+  position: relative;
+}
+.rs-calc__result_block::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='397' height='397' viewBox='0 0 397 397' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='198.5' cy='198.5' r='197.068' stroke='%237E5DDD' stroke-width='1.86353' stroke-dasharray='9.32 9.32'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-animation: dashedMove 100s linear infinite;
+          animation: dashedMove 100s linear infinite;
+}
+@-webkit-keyframes dashedMove {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes dashedMove {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.rs-calc__result_img {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 65px 84px;
+  border-radius: 50%;
+  background: #f3f6fb;
+}
+.rs-calc__option {
+  margin-left: -12px;
+}
