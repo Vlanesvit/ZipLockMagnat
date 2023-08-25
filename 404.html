@@ -11,7 +11,7 @@
 
 	<link rel="stylesheet" href="css/rs-style.css">
 
-	<title>Zip Lock Magnat - Поиск</title>
+	<title>404 - Zip Lock Magnat</title>
 </head>
 
 <body>
@@ -267,7 +267,7 @@
 					<div class="rs-error-block__description">
 						<h2 class="nunito--regular-44">Что-то не в порядке </h2>
 						<p class="nunito--regular-16">Мы не можем найти страницу, которую вы ищете.</p>
-						<a href="index.html" class="rs-btn _btn-primary">
+						<a href="#" data-popup="#popup-feedback" class="rs-btn _btn-primary">
 							<span>Связаться с нами</span>
 							<svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
 								<path
@@ -278,6 +278,75 @@
 				</div>
 			</section>
 
+			<div id="popup-feedback" class="popup popup-feedback">
+				<div class="popup__wrapper">
+					<div class="popup__content">
+						<button data-close type="button" class="popup__close _icon-close"></button>
+						<div class="popup__text">
+							<div class="popup__part">
+								<h2 class="nunito--regular-40">Свяжитесь с нами </h2>
+								<p class="nunito--regular-16">Оставьте заявку, наш менеджер свяжется с вами
+									в ближайшее время</p>
+								<div class="form">
+									<form action="#">
+										<div class="form__wrapper">
+											<div class="form__block">
+												<div class="form__line">
+													<label for="user-popup-name"
+														class="rs-input-placeholder">ФИО</label>
+													<input id="user-popup-name" type="text" name="form[]" data-required
+														data-validate data-error="Введите ФИО" required
+														class="rs-input">
+													<button type="button" class="rs-input-clear _icon-close"></button>
+												</div>
+												<div class="form__line">
+													<label for="user-popup-phone"
+														class="rs-input-placeholder">Телефон</label>
+													<input id="user-popup-phone" type="tel" name="form[]"
+														data-required="tel" data-validate required
+														data-error="Введите телефон" class="rs-input">
+													<button type="button" class="rs-input-clear _icon-close"></button>
+												</div>
+												<div class="form__line">
+													<label for="user-popup-email"
+														class="rs-input-placeholder">E-mail</label>
+													<input id="user-popup-email" type="email" name="form[]"
+														data-required="email" data-validate required
+														data-error="Введите e-mail" class="rs-input">
+													<button type="button" class="rs-input-clear _icon-close"></button>
+												</div>
+												<div class="form__line">
+													<label for="user-popup-message" class="rs-input-placeholder">Введите
+														ваше сообщение</label>
+													<textarea id="user-popup-message" name="form[]"
+														class="rs-input"></textarea>
+													<button type="button" class="rs-input-clear _icon-close"></button>
+												</div>
+											</div>
+											<div class="form__footer">
+												<div class="form__agreement">Нажимая на кнопку «Отправить сообщение», Вы
+													соглашаетесь на обработку персональных данных в соответствии с
+													<a href="#">пользовательским соглашением</a>
+												</div>
+												<div class="form__button">
+													<button type="submit" class="rs-btn _btn-primary">
+														<span>Отправить сообщение</span>
+														<svg viewBox="-5 -5 110 110" preserveAspectRatio="none"
+															aria-hidden="true">
+															<path
+																d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		</main>
 
@@ -295,27 +364,29 @@
 										<div class="form__line">
 											<label class="rs-placeholder">ваше имя *</label>
 											<input autocomplete="off" type="text" name="form[]"
-												placeholder="Введите имя" class="rs-input" required>
+												placeholder="Введите имя" data-required data-validate
+												data-error="Введите ФИО" required class="rs-input">
 										</div>
 
 										<div class="form__row">
 											<div class="form__line">
 												<label class="rs-placeholder">телефон *</label>
 												<input autocomplete="off" type="tel" name="form[]"
-													placeholder="Введите номер телефона" class="rs-input" required>
+													placeholder="Введите номер телефона" data-required data-validate
+													data-error="Введите номер телефона" required class="rs-input">
 											</div>
 
 											<div class="form__line">
 												<label class="rs-placeholder">email *</label>
 												<input autocomplete="off" type="text" name="form[]"
-													placeholder="Введите email" class="rs-input" required>
+													placeholder="Введите email" data-required="email" data-validate
+													required data-error="Введите email" class="rs-input">
 											</div>
 										</div>
 
 										<div class="form__line">
 											<label class="rs-placeholder">Ваш вопрос *</label>
-											<input autocomplete="off" type="text" name="form[]"
-												placeholder="Введите сообщение" class="rs-input" required>
+											<input autocomplete="off" type="text" name="form[]" class="rs-input">
 										</div>
 									</div>
 								</div>
@@ -407,11 +478,9 @@
 
 	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script>AOS.init({ duration: 500, easing: 'ease-out-quart', once: false });</script>
-	<script src="https://unpkg.com/lightgallery@2.4.0/lightgallery.min.js"></script>
-	<script src="https://unpkg.com/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script>
+	<script src="lib/scroll-reveal/scroll-reveal.js"></script>
+	<script src="lib/scroll-reveal/sr-setting.js"></script>
+	<script src="lib/swiper/swiper-bundle.min.js"></script>
 	<script src="lib/dynamic_adapt.js"></script>
 	<script src="js/rs-script.js"></script>
 

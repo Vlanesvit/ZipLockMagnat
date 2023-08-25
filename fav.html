@@ -11,7 +11,7 @@
 
 	<link rel="stylesheet" href="css/rs-style.css">
 
-	<title>Zip Lock Magnat - Избранное</title>
+	<title>Избранное - Zip Lock Magnat</title>
 </head>
 
 <body>
@@ -258,7 +258,6 @@
 
 		<main class="page">
 
-			<link rel="stylesheet" href="css/rs-breadcrumbs.css">
 			<div class="rs-breadcrumbs">
 				<div class="rs-breadcrumbs__container">
 					<nav class="rs-breadcrumbs__navigation">
@@ -916,27 +915,29 @@
 										<div class="form__line">
 											<label class="rs-placeholder">ваше имя *</label>
 											<input autocomplete="off" type="text" name="form[]"
-												placeholder="Введите имя" class="rs-input" required>
+												placeholder="Введите имя" data-required data-validate
+												data-error="Введите ФИО" required class="rs-input">
 										</div>
 
 										<div class="form__row">
 											<div class="form__line">
 												<label class="rs-placeholder">телефон *</label>
 												<input autocomplete="off" type="tel" name="form[]"
-													placeholder="Введите номер телефона" class="rs-input" required>
+													placeholder="Введите номер телефона" data-required data-validate
+													data-error="Введите номер телефона" required class="rs-input">
 											</div>
 
 											<div class="form__line">
 												<label class="rs-placeholder">email *</label>
 												<input autocomplete="off" type="text" name="form[]"
-													placeholder="Введите email" class="rs-input" required>
+													placeholder="Введите email" data-required="email" data-validate
+													required data-error="Введите email" class="rs-input">
 											</div>
 										</div>
 
 										<div class="form__line">
 											<label class="rs-placeholder">Ваш вопрос *</label>
-											<input autocomplete="off" type="text" name="form[]"
-												placeholder="Введите сообщение" class="rs-input" required>
+											<input autocomplete="off" type="text" name="form[]" class="rs-input">
 										</div>
 									</div>
 								</div>
@@ -1028,11 +1029,9 @@
 
 	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script>AOS.init({ duration: 500, easing: 'ease-out-quart', once: false });</script>
-	<script src="https://unpkg.com/lightgallery@2.4.0/lightgallery.min.js"></script>
-	<script src="https://unpkg.com/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script>
+	<script src="lib/scroll-reveal/scroll-reveal.js"></script>
+	<script src="lib/scroll-reveal/sr-setting.js"></script>
+	<script src="lib/swiper/swiper-bundle.min.js"></script>
 	<script src="lib/dynamic_adapt.js"></script>
 	<script src="js/rs-script.js"></script>
 

@@ -421,27 +421,29 @@
 										<div class="form__line">
 											<label class="rs-placeholder">ваше имя *</label>
 											<input autocomplete="off" type="text" name="form[]"
-												placeholder="Введите имя" class="rs-input" required>
+												placeholder="Введите имя" data-required data-validate
+												data-error="Введите ФИО" required class="rs-input">
 										</div>
 
 										<div class="form__row">
 											<div class="form__line">
 												<label class="rs-placeholder">телефон *</label>
 												<input autocomplete="off" type="tel" name="form[]"
-													placeholder="Введите номер телефона" class="rs-input" required>
+													placeholder="Введите номер телефона" data-required data-validate
+													data-error="Введите номер телефона" required class="rs-input">
 											</div>
 
 											<div class="form__line">
 												<label class="rs-placeholder">email *</label>
 												<input autocomplete="off" type="text" name="form[]"
-													placeholder="Введите email" class="rs-input" required>
+													placeholder="Введите email" data-required="email" data-validate
+													required data-error="Введите email" class="rs-input">
 											</div>
 										</div>
 
 										<div class="form__line">
 											<label class="rs-placeholder">Ваш вопрос *</label>
-											<input autocomplete="off" type="text" name="form[]"
-												placeholder="Введите сообщение" class="rs-input" required>
+											<input autocomplete="off" type="text" name="form[]" class="rs-input">
 										</div>
 									</div>
 								</div>

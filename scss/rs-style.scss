@@ -1,6 +1,6 @@
 // Подключение шрифтов ===========================================================================================================================================================================================================================================================================
 //&display=swap - добавить при подключении через плагин
-@import url(https://fonts.googleapis.com/css?family=Nunito:regular,500,600,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Nunito:regular,500,600,700,900&display=swap);
 
 // Подключить если есть локальные файлы шрифтов
 @import "fonts/fonts";
@@ -73,6 +73,11 @@ body {
 	max-width: $maxWidthContainer;
 	padding-left: 20px;
 	padding-right: 20px;
+
+	[class*="__container"] {
+		padding: 0;
+		max-width: 100%;
+	}
 }
 
 // Вспомогательные классы ======================================================================================================================================================================================================================
@@ -93,13 +98,13 @@ body {
 @import "./base/_swiper";
 @import "./base/_pagging";
 @import "./base/_breadcrumbs";
+@import "./base/_modal";
 // @import "./base/_datepicker";
 // @import "./base/_light-gallery";
 // @import "./base/_spollers";
 // @import "./base/_tabs";
 // @import "./base/_select";
 // @import "./base/_custom-cursor";
-// @import "./base/_modal";
 // @import "./base/_showmore";
 // @import "./base/_anim";
 // @import "./base/_video";
