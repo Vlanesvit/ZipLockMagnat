@@ -1,0 +1,165 @@
+// <SELECT>
+// Снипет (HTML): sel
+.select {
+	position: relative;
+
+	// .select__body
+	&__body {
+		position: relative;
+	}
+
+	// .select__title
+	&__title {
+		text-align: left;
+		cursor: pointer;
+		width: 100%;
+		border-radius: 8px;
+		background: #f3f6fb;
+		padding: 9px 16px;
+		transition: all 0.3s ease 0s;
+		color: #1a1a1f;
+		font-variant-numeric: lining-nums proportional-nums;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 160%; /* 22.4px */
+	}
+
+	// .select__value
+	&__value {
+		display: flex;
+		align-items: center;
+		height: 100%;
+
+		> * {
+			flex: 1 1 auto;
+		}
+
+		&::after {
+			content: "\e912";
+			font-family: "icons" !important;
+			speak: never;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-size: 24px;
+			color: #7e5ddd;
+			transition: transform 0.3s ease 0s;
+			margin: 0px 0px 0px auto;
+		}
+	}
+
+	// .select__text
+	&__text {
+		flex: 1 1 auto;
+	}
+
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+
+	// .select__options
+	&__options {
+		color: #1a1a1f;
+		font-variant-numeric: lining-nums proportional-nums;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 160%; /* 22.4px */
+		position: absolute;
+		top: 100%;
+		padding: 15px 15px;
+		border-radius: 8px;
+		background: #fff;
+		box-shadow: 0px 3px 15px 0px rgba(67, 56, 107, 0.1);
+		min-width: 100%;
+		left: 0;
+		z-index: 5;
+	}
+
+	// .select__scroll
+	&__scroll {
+		overflow-y: auto;
+		overflow-x: hidden;
+		max-height: 300px;
+
+		// Стили скроллбара
+		.simplebar-scrollbar {
+			&::before {
+				//opacity: 1;
+			}
+		}
+	}
+	// .select__option
+	&__option {
+		width: 100%;
+		text-align: left;
+		cursor: pointer;
+		padding: 10px 20px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 26px;
+		font-feature-settings: "pnum" on, "lnum" on;
+		transition: all 0.3s ease 0s;
+		position: relative;
+
+		&._select-selected {
+			background-color: #f3f6fb;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: #f3f6fb;
+			}
+		}
+	}
+
+	// Конструкция дополнительных данных
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	&__asset {
+	}
+
+	&__text {
+	}
+
+	// Состояния селекта
+	&._select-open {
+		.select__title {
+			border-radius: 12px 12px 0px 0px;
+		}
+
+		.select__value::after {
+			transform: rotate(180deg);
+		}
+	}
+
+	&._select-disabled {
+	}
+
+	&._select-active {
+	}
+
+	&._select-focus {
+	}
+
+	&._select-multiple {
+	}
+
+	&._select-checkbox {
+	}
+
+	._select-tag {
+		cursor: pointer;
+	}
+}

@@ -73,7 +73,7 @@
   color: #fff;
 }
 
-._rs-icon-list_arrow-down:before {
+._rs-icon-list_arrow-right:before {
   content: "\e912";
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -277,6 +277,18 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 html.lock {
