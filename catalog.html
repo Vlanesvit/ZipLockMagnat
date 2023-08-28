@@ -6,9 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=, initial-scale=1.0">
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-
+	<link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/lightgallery@2.4.0/css/lightgallery-bundle.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/lightgallery@2.4.0/css/lg-zoom.css">
 	<link rel="stylesheet" href="css/rs-style.css">
-
 	<title>Матовый с белым бегунком - Zip Lock Magnat</title>
 </head>
 
@@ -264,34 +265,33 @@
 						<div class="rs-main-content__sidebar">
 
 							<link rel="stylesheet" href="css/rs-filter.css">
+							<script src="js/rs-catalog.js" defer></script>
 							<div class="rs-filter">
 								<div class="rs-filter__block">
 									<form method="POST" action="#">
-										<div class="rs-filter__list">
-											<div class="rs-filter__item rs-filter__range">
-												<div class="rs-filter__head">
-													<button type="button"
-														class="rs-filter__accordion _open-filter">Цена</button>
-												</div>
-												<div class="rs-filter__body">
+										<div data-spollers data-one-spoller class="rs-filter__spollers">
+											<div class="rs-filter__spollers_item">
+												<button type="button" data-spoller
+													class="rs-filter__spollers_title">Цена</button>
+												<div class="rs-filter__spollers_body">
 													<div class="range-filter">
 														<div class="range__block">
 															<div class="range-inputs">
 																<div class="range-item">
 																	<label class="range-label">
 																		<input type="number" class="range-input"
-																			id="input-width__min">
+																			id="input-price__min">
 																	</label>
 																</div>
 																<div class="range-item">
 																	<label class="range-label">
 																		<input type="number" class="range-input"
-																			id="input-width__max">
+																			id="input-price__max">
 																	</label>
 																</div>
 															</div>
 															<div class="range__button">
-																<a href="#" class="rs-btn _btn-second">
+																<a href="#" class="rs-btn _btn-primary">
 																	<span>Искать</span>
 																	<svg viewBox="-5 -5 110 110"
 																		preserveAspectRatio="none" aria-hidden="true">
@@ -301,36 +301,82 @@
 																</a>
 															</div>
 														</div>
-														<div class="range-slider" id="range-width__slider"></div>
+														<div class="range-slider" id="range-price__slider"></div>
 													</div>
 												</div>
 											</div>
 
-											<div class="rs-filter__item rs-filter__range">
-												<div class="rs-filter__head">
-													<button type="button"
-														class="rs-filter__accordion _open-filter">Наличие</button>
-												</div>
-												<div class="rs-filter__body">
+											<div class="rs-filter__spollers_item">
+												<button type="button" data-spoller
+													class="rs-filter__spollers_title">Наличие</button>
+												<div class="rs-filter__spollers_body">
 													<div class="checkbox__switch">
 														<div class="checkbox__switch_text">Товары только в наличии</div>
 														<div class="checkbox__switch_wrap">
 															<input type="checkbox" name="checkbox">
+															<span class="checkbox__switch_slider"></span>
 														</div>
 													</div>
 												</div>
 											</div>
 
-											<div class="rs-filter__item rs-filter__checkbox">
-												<div class="rs-filter__head">
-													<button type="button"
-														class="rs-filter__accordion _open-filter">Размер, см</button>
-												</div>
-												<div class="rs-filter__body">
+											<div class="rs-filter__spollers_item">
+												<button type="button" data-spoller
+													class="rs-filter__spollers_title">Размер, см</button>
+												<div class="rs-filter__spollers_body">
 													<div class="checkbox__filter">
 														<div class="checkbox__block">
 															<div class="checkbox__list">
 																<ul class="checkbox__nav">
+																	<li>
+																		<label>
+																			<input type="checkbox">
+																			<span class="checkbox"></span>
+																			<span class="checkbox-label">15х20</span>
+																		</label>
+																	</li>
+																	<li>
+																		<label>
+																			<input type="checkbox">
+																			<span class="checkbox"></span>
+																			<span class="checkbox-label">15х25</span>
+																		</label>
+																	</li>
+																	<li>
+																		<label>
+																			<input type="checkbox">
+																			<span class="checkbox"></span>
+																			<span class="checkbox-label">20х25</span>
+																		</label>
+																	</li>
+																	<li>
+																		<label>
+																			<input type="checkbox">
+																			<span class="checkbox"></span>
+																			<span class="checkbox-label">25х25</span>
+																		</label>
+																	</li>
+																	<li>
+																		<label>
+																			<input type="checkbox">
+																			<span class="checkbox"></span>
+																			<span class="checkbox-label">25х30</span>
+																		</label>
+																	</li>
+																	<li>
+																		<label>
+																			<input type="checkbox">
+																			<span class="checkbox"></span>
+																			<span class="checkbox-label">10х10</span>
+																		</label>
+																	</li>
+																	<li>
+																		<label>
+																			<input type="checkbox">
+																			<span class="checkbox"></span>
+																			<span class="checkbox-label">10х15</span>
+																		</label>
+																	</li>
 																	<li>
 																		<label>
 																			<input type="checkbox">
@@ -387,6 +433,7 @@
 												</div>
 											</div>
 										</div>
+
 										<div class="rs-filter__control">
 											<a href="#" class="rs-btn _btn-second">
 												<span>Сбросить фильтры</span>
@@ -432,7 +479,7 @@
 							</div>
 
 							<link rel="stylesheet" href="css/rs-banner.css">
-							<section class="rs-banner rs-banner-reverse">
+							<section class="rs-banner rs-banner-reverse rs-banner-catalog">
 								<div class="rs-banner__container">
 									<div class="rs-banner__wrapper">
 										<div class="rs-banner__bg">
@@ -465,6 +512,7 @@
 							</section>
 
 							<link rel="stylesheet" href="css/rs-catalog.css">
+							<script src="js/rs-product.js" defer></script>
 							<section class="rs-catalog">
 								<div class="rs-catalog__container">
 									<div class="rs-catalog__wrapper">
@@ -474,11 +522,15 @@
 												</div>
 											</div>
 
+											<button class="rs-catalog__open-filter _rs-icon-filter">
+												<span>Показать фильтры</span>
+											</button>
+
 											<div class="rs-catalog__sortings">
 												<form action="#">
 													<select name="form[]" data-submit data-pseudo-label="Сортировать:">
-														<option value="1">По популярности</option>
 														<option value="2">По новизне</option>
+														<option value="1">По популярности</option>
 													</select>
 												</form>
 											</div>
@@ -496,19 +548,20 @@
 																			alt="">
 																	</a>
 																</div>
-															</div>
-															<div class="rs-catalog-product__action">
-																<ul>
-																	<li><a href="#" class="fav-btn _rs-icon-fav"></a>
-																	</li>
-																</ul>
+																<div class="rs-catalog-product__action">
+																	<ul>
+																		<li><a href="#"
+																				class="fav-btn _rs-icon-fav"></a>
+																		</li>
+																	</ul>
+																</div>
 															</div>
 															<div class="rs-catalog-product__description">
 																<h6 class="nunito--semibold-18">Пакет Zip-Lock 40х60 мм
 																	(гриппер)</h6>
 
 																<div data-showmore class="rs-catalog-product__table">
-																	<div data-showmore-content="163"
+																	<div data-showmore-content="168"
 																		class="rs-catalog-product__table__content">
 																		<table>
 																			<thead>
@@ -540,7 +593,6 @@
 																	<button hidden data-showmore-button type="button"
 																		class="rs-catalog-product__table__more">
 																		<span>Показать ещё</span>
-																		<span>Скрыть</span>
 																	</button>
 																</div>
 															</div>
@@ -551,976 +603,12 @@
 																	В наличии на складе
 																</div>
 																<div class="rs-catalog-product__prices">
-																	<h3 class="nunito--bold-28">446,50 ₽</h3>
-																	<p class="nunito--medium-14">19,86 ₽ за 1 шт</p>
-																</div>
-																<div
-																	class="rs-catalog-product__warning _rs-icon-warning">
-																	Минимальное количество заказа — 50 шт
-																</div>
-																<div class="rs-catalog-product__button">
-																	<a href="#" data-popup="#popup-feedback"
-																		class="rs-btn _btn-primary">
-																		<span>Добавить в корзину</span>
-																		<svg viewBox="-5 -5 110 110"
-																			preserveAspectRatio="none"
-																			aria-hidden="true">
-																			<path
-																				d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
-																		</svg>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="rs-catalog__item">
-													<div class="rs-catalog-product">
-														<div class="rs-catalog-product__item">
-															<div class="rs-catalog-product__picture">
-																<div class="rs-catalog-product__img">
-																	<a href="#">
-																		<img src="./img/pages/product/prodict_fish.jpg"
-																			alt="">
-																	</a>
-																</div>
-															</div>
-															<div class="rs-catalog-product__action">
-																<ul>
-																	<li><a href="#" class="fav-btn _rs-icon-fav"></a>
-																	</li>
-																</ul>
-															</div>
-															<div class="rs-catalog-product__description">
-																<h6 class="nunito--semibold-18">Пакет Zip-Lock 40х60 мм
-																	(гриппер)</h6>
-
-																<div data-showmore class="rs-catalog-product__table">
-																	<div data-showmore-content="163"
-																		class="rs-catalog-product__table__content">
-																		<table>
-																			<thead>
-																				<tr>
-																					<th>Количество</th>
-																					<th>Скидка</th>
-																				</tr>
-																			</thead>
-																			<tbody>
-																				<tr>
-																					<td>от 50 шт</td>
-																					<td>3%</td>
-																				</tr>
-																				<tr>
-																					<td>от 500 шт</td>
-																					<td>5%</td>
-																				</tr>
-																				<tr>
-																					<td>от 1 000 шт</td>
-																					<td>7%</td>
-																				</tr>
-																				<tr>
-																					<td>от 5 000 шт</td>
-																					<td>10%</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
-																	<button hidden data-showmore-button type="button"
-																		class="rs-catalog-product__table__more">
-																		<span>Показать ещё</span>
-																		<span>Скрыть</span>
-																	</button>
-																</div>
-															</div>
-
-															<div class="rs-catalog-product__info">
-																<div class="rs-catalog-product__status">
-																	<img src="./img/icons/status-green.svg" alt="">
-																	В наличии на складе
-																</div>
-																<div class="rs-catalog-product__prices">
-																	<h3 class="nunito--bold-28">446,50 ₽</h3>
-																	<p class="nunito--medium-14">19,86 ₽ за 1 шт</p>
-																</div>
-																<div
-																	class="rs-catalog-product__warning _rs-icon-warning">
-																	Минимальное количество заказа — 50 шт
-																</div>
-																<div class="rs-catalog-product__button">
-																	<a href="#" data-popup="#popup-feedback"
-																		class="rs-btn _btn-primary">
-																		<span>Добавить в корзину</span>
-																		<svg viewBox="-5 -5 110 110"
-																			preserveAspectRatio="none"
-																			aria-hidden="true">
-																			<path
-																				d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
-																		</svg>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="rs-catalog__item">
-													<div class="rs-catalog-product">
-														<div class="rs-catalog-product__item">
-															<div class="rs-catalog-product__picture">
-																<div class="rs-catalog-product__img">
-																	<a href="#">
-																		<img src="./img/pages/product/prodict_fish.jpg"
-																			alt="">
-																	</a>
-																</div>
-															</div>
-															<div class="rs-catalog-product__action">
-																<ul>
-																	<li><a href="#" class="fav-btn _rs-icon-fav"></a>
-																	</li>
-																</ul>
-															</div>
-															<div class="rs-catalog-product__description">
-																<h6 class="nunito--semibold-18">Пакет Zip-Lock 40х60 мм
-																	(гриппер)</h6>
-
-																<div data-showmore class="rs-catalog-product__table">
-																	<div data-showmore-content="163"
-																		class="rs-catalog-product__table__content">
-																		<table>
-																			<thead>
-																				<tr>
-																					<th>Количество</th>
-																					<th>Скидка</th>
-																				</tr>
-																			</thead>
-																			<tbody>
-																				<tr>
-																					<td>от 50 шт</td>
-																					<td>3%</td>
-																				</tr>
-																				<tr>
-																					<td>от 500 шт</td>
-																					<td>5%</td>
-																				</tr>
-																				<tr>
-																					<td>от 1 000 шт</td>
-																					<td>7%</td>
-																				</tr>
-																				<tr>
-																					<td>от 5 000 шт</td>
-																					<td>10%</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
-																	<button hidden data-showmore-button type="button"
-																		class="rs-catalog-product__table__more">
-																		<span>Показать ещё</span>
-																		<span>Скрыть</span>
-																	</button>
-																</div>
-															</div>
-
-															<div class="rs-catalog-product__info">
-																<div class="rs-catalog-product__status">
-																	<img src="./img/icons/status-green.svg" alt="">
-																	В наличии на складе
-																</div>
-																<div class="rs-catalog-product__prices">
-																	<h3 class="nunito--bold-28">446,50 ₽</h3>
-																	<p class="nunito--medium-14">19,86 ₽ за 1 шт</p>
-																</div>
-																<div
-																	class="rs-catalog-product__warning _rs-icon-warning">
-																	Минимальное количество заказа — 50 шт
-																</div>
-																<div class="rs-catalog-product__button">
-																	<a href="#" data-popup="#popup-feedback"
-																		class="rs-btn _btn-primary">
-																		<span>Добавить в корзину</span>
-																		<svg viewBox="-5 -5 110 110"
-																			preserveAspectRatio="none"
-																			aria-hidden="true">
-																			<path
-																				d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
-																		</svg>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="rs-catalog__item">
-													<div class="rs-catalog-product">
-														<div class="rs-catalog-product__item">
-															<div class="rs-catalog-product__picture">
-																<div class="rs-catalog-product__img">
-																	<a href="#">
-																		<img src="./img/pages/product/prodict_fish.jpg"
-																			alt="">
-																	</a>
-																</div>
-															</div>
-															<div class="rs-catalog-product__action">
-																<ul>
-																	<li><a href="#" class="fav-btn _rs-icon-fav"></a>
-																	</li>
-																</ul>
-															</div>
-															<div class="rs-catalog-product__description">
-																<h6 class="nunito--semibold-18">Пакет Zip-Lock 40х60 мм
-																	(гриппер)</h6>
-
-																<div data-showmore class="rs-catalog-product__table">
-																	<div data-showmore-content="163"
-																		class="rs-catalog-product__table__content">
-																		<table>
-																			<thead>
-																				<tr>
-																					<th>Количество</th>
-																					<th>Скидка</th>
-																				</tr>
-																			</thead>
-																			<tbody>
-																				<tr>
-																					<td>от 50 шт</td>
-																					<td>3%</td>
-																				</tr>
-																				<tr>
-																					<td>от 500 шт</td>
-																					<td>5%</td>
-																				</tr>
-																				<tr>
-																					<td>от 1 000 шт</td>
-																					<td>7%</td>
-																				</tr>
-																				<tr>
-																					<td>от 5 000 шт</td>
-																					<td>10%</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
-																	<button hidden data-showmore-button type="button"
-																		class="rs-catalog-product__table__more">
-																		<span>Показать ещё</span>
-																		<span>Скрыть</span>
-																	</button>
-																</div>
-															</div>
-
-															<div class="rs-catalog-product__info">
-																<div class="rs-catalog-product__status">
-																	<img src="./img/icons/status-green.svg" alt="">
-																	В наличии на складе
-																</div>
-																<div class="rs-catalog-product__prices">
-																	<h3 class="nunito--bold-28">446,50 ₽</h3>
-																	<p class="nunito--medium-14">19,86 ₽ за 1 шт</p>
-																</div>
-																<div
-																	class="rs-catalog-product__warning _rs-icon-warning">
-																	Минимальное количество заказа — 50 шт
-																</div>
-																<div class="rs-catalog-product__button">
-																	<a href="#" data-popup="#popup-feedback"
-																		class="rs-btn _btn-primary">
-																		<span>Добавить в корзину</span>
-																		<svg viewBox="-5 -5 110 110"
-																			preserveAspectRatio="none"
-																			aria-hidden="true">
-																			<path
-																				d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
-																		</svg>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="rs-catalog__item">
-													<div class="rs-catalog-product">
-														<div class="rs-catalog-product__item">
-															<div class="rs-catalog-product__picture">
-																<div class="rs-catalog-product__img">
-																	<a href="#">
-																		<img src="./img/pages/product/prodict_fish.jpg"
-																			alt="">
-																	</a>
-																</div>
-															</div>
-															<div class="rs-catalog-product__action">
-																<ul>
-																	<li><a href="#" class="fav-btn _rs-icon-fav"></a>
-																	</li>
-																</ul>
-															</div>
-															<div class="rs-catalog-product__description">
-																<h6 class="nunito--semibold-18">Пакет Zip-Lock 40х60 мм
-																	(гриппер)</h6>
-
-																<div data-showmore class="rs-catalog-product__table">
-																	<div data-showmore-content="163"
-																		class="rs-catalog-product__table__content">
-																		<table>
-																			<thead>
-																				<tr>
-																					<th>Количество</th>
-																					<th>Скидка</th>
-																				</tr>
-																			</thead>
-																			<tbody>
-																				<tr>
-																					<td>от 50 шт</td>
-																					<td>3%</td>
-																				</tr>
-																				<tr>
-																					<td>от 500 шт</td>
-																					<td>5%</td>
-																				</tr>
-																				<tr>
-																					<td>от 1 000 шт</td>
-																					<td>7%</td>
-																				</tr>
-																				<tr>
-																					<td>от 5 000 шт</td>
-																					<td>10%</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
-																	<button hidden data-showmore-button type="button"
-																		class="rs-catalog-product__table__more">
-																		<span>Показать ещё</span>
-																		<span>Скрыть</span>
-																	</button>
-																</div>
-															</div>
-
-															<div class="rs-catalog-product__info">
-																<div class="rs-catalog-product__status">
-																	<img src="./img/icons/status-green.svg" alt="">
-																	В наличии на складе
-																</div>
-																<div class="rs-catalog-product__prices">
-																	<h3 class="nunito--bold-28">446,50 ₽</h3>
-																	<p class="nunito--medium-14">19,86 ₽ за 1 шт</p>
-																</div>
-																<div
-																	class="rs-catalog-product__warning _rs-icon-warning">
-																	Минимальное количество заказа — 50 шт
-																</div>
-																<div class="rs-catalog-product__button">
-																	<a href="#" data-popup="#popup-feedback"
-																		class="rs-btn _btn-primary">
-																		<span>Добавить в корзину</span>
-																		<svg viewBox="-5 -5 110 110"
-																			preserveAspectRatio="none"
-																			aria-hidden="true">
-																			<path
-																				d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
-																		</svg>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="rs-catalog__item">
-													<div class="rs-catalog-product">
-														<div class="rs-catalog-product__item">
-															<div class="rs-catalog-product__picture">
-																<div class="rs-catalog-product__img">
-																	<a href="#">
-																		<img src="./img/pages/product/prodict_fish.jpg"
-																			alt="">
-																	</a>
-																</div>
-															</div>
-															<div class="rs-catalog-product__action">
-																<ul>
-																	<li><a href="#" class="fav-btn _rs-icon-fav"></a>
-																	</li>
-																</ul>
-															</div>
-															<div class="rs-catalog-product__description">
-																<h6 class="nunito--semibold-18">Пакет Zip-Lock 40х60 мм
-																	(гриппер)</h6>
-
-																<div data-showmore class="rs-catalog-product__table">
-																	<div data-showmore-content="163"
-																		class="rs-catalog-product__table__content">
-																		<table>
-																			<thead>
-																				<tr>
-																					<th>Количество</th>
-																					<th>Скидка</th>
-																				</tr>
-																			</thead>
-																			<tbody>
-																				<tr>
-																					<td>от 50 шт</td>
-																					<td>3%</td>
-																				</tr>
-																				<tr>
-																					<td>от 500 шт</td>
-																					<td>5%</td>
-																				</tr>
-																				<tr>
-																					<td>от 1 000 шт</td>
-																					<td>7%</td>
-																				</tr>
-																				<tr>
-																					<td>от 5 000 шт</td>
-																					<td>10%</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
-																	<button hidden data-showmore-button type="button"
-																		class="rs-catalog-product__table__more">
-																		<span>Показать ещё</span>
-																		<span>Скрыть</span>
-																	</button>
-																</div>
-															</div>
-
-															<div class="rs-catalog-product__info">
-																<div class="rs-catalog-product__status">
-																	<img src="./img/icons/status-green.svg" alt="">
-																	В наличии на складе
-																</div>
-																<div class="rs-catalog-product__prices">
-																	<h3 class="nunito--bold-28">446,50 ₽</h3>
-																	<p class="nunito--medium-14">19,86 ₽ за 1 шт</p>
-																</div>
-																<div
-																	class="rs-catalog-product__warning _rs-icon-warning">
-																	Минимальное количество заказа — 50 шт
-																</div>
-																<div class="rs-catalog-product__button">
-																	<a href="#" data-popup="#popup-feedback"
-																		class="rs-btn _btn-primary">
-																		<span>Добавить в корзину</span>
-																		<svg viewBox="-5 -5 110 110"
-																			preserveAspectRatio="none"
-																			aria-hidden="true">
-																			<path
-																				d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
-																		</svg>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="rs-catalog__item">
-													<div class="rs-catalog-product">
-														<div class="rs-catalog-product__item">
-															<div class="rs-catalog-product__picture">
-																<div class="rs-catalog-product__img">
-																	<a href="#">
-																		<img src="./img/pages/product/prodict_fish.jpg"
-																			alt="">
-																	</a>
-																</div>
-															</div>
-															<div class="rs-catalog-product__action">
-																<ul>
-																	<li><a href="#" class="fav-btn _rs-icon-fav"></a>
-																	</li>
-																</ul>
-															</div>
-															<div class="rs-catalog-product__description">
-																<h6 class="nunito--semibold-18">Пакет Zip-Lock 40х60 мм
-																	(гриппер)</h6>
-
-																<div data-showmore class="rs-catalog-product__table">
-																	<div data-showmore-content="163"
-																		class="rs-catalog-product__table__content">
-																		<table>
-																			<thead>
-																				<tr>
-																					<th>Количество</th>
-																					<th>Скидка</th>
-																				</tr>
-																			</thead>
-																			<tbody>
-																				<tr>
-																					<td>от 50 шт</td>
-																					<td>3%</td>
-																				</tr>
-																				<tr>
-																					<td>от 500 шт</td>
-																					<td>5%</td>
-																				</tr>
-																				<tr>
-																					<td>от 1 000 шт</td>
-																					<td>7%</td>
-																				</tr>
-																				<tr>
-																					<td>от 5 000 шт</td>
-																					<td>10%</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
-																	<button hidden data-showmore-button type="button"
-																		class="rs-catalog-product__table__more">
-																		<span>Показать ещё</span>
-																		<span>Скрыть</span>
-																	</button>
-																</div>
-															</div>
-
-															<div class="rs-catalog-product__info">
-																<div class="rs-catalog-product__status">
-																	<img src="./img/icons/status-green.svg" alt="">
-																	В наличии на складе
-																</div>
-																<div class="rs-catalog-product__prices">
-																	<h3 class="nunito--bold-28">446,50 ₽</h3>
-																	<p class="nunito--medium-14">19,86 ₽ за 1 шт</p>
-																</div>
-																<div
-																	class="rs-catalog-product__warning _rs-icon-warning">
-																	Минимальное количество заказа — 50 шт
-																</div>
-																<div class="rs-catalog-product__button">
-																	<a href="#" data-popup="#popup-feedback"
-																		class="rs-btn _btn-primary">
-																		<span>Добавить в корзину</span>
-																		<svg viewBox="-5 -5 110 110"
-																			preserveAspectRatio="none"
-																			aria-hidden="true">
-																			<path
-																				d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
-																		</svg>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="rs-catalog__item">
-													<div class="rs-catalog-product">
-														<div class="rs-catalog-product__item">
-															<div class="rs-catalog-product__picture">
-																<div class="rs-catalog-product__img">
-																	<a href="#">
-																		<img src="./img/pages/product/prodict_fish.jpg"
-																			alt="">
-																	</a>
-																</div>
-															</div>
-															<div class="rs-catalog-product__action">
-																<ul>
-																	<li><a href="#" class="fav-btn _rs-icon-fav"></a>
-																	</li>
-																</ul>
-															</div>
-															<div class="rs-catalog-product__description">
-																<h6 class="nunito--semibold-18">Пакет Zip-Lock 40х60 мм
-																	(гриппер)</h6>
-
-																<div data-showmore class="rs-catalog-product__table">
-																	<div data-showmore-content="163"
-																		class="rs-catalog-product__table__content">
-																		<table>
-																			<thead>
-																				<tr>
-																					<th>Количество</th>
-																					<th>Скидка</th>
-																				</tr>
-																			</thead>
-																			<tbody>
-																				<tr>
-																					<td>от 50 шт</td>
-																					<td>3%</td>
-																				</tr>
-																				<tr>
-																					<td>от 500 шт</td>
-																					<td>5%</td>
-																				</tr>
-																				<tr>
-																					<td>от 1 000 шт</td>
-																					<td>7%</td>
-																				</tr>
-																				<tr>
-																					<td>от 5 000 шт</td>
-																					<td>10%</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
-																	<button hidden data-showmore-button type="button"
-																		class="rs-catalog-product__table__more">
-																		<span>Показать ещё</span>
-																		<span>Скрыть</span>
-																	</button>
-																</div>
-															</div>
-
-															<div class="rs-catalog-product__info">
-																<div class="rs-catalog-product__status">
-																	<img src="./img/icons/status-green.svg" alt="">
-																	В наличии на складе
-																</div>
-																<div class="rs-catalog-product__prices">
-																	<h3 class="nunito--bold-28">446,50 ₽</h3>
-																	<p class="nunito--medium-14">19,86 ₽ за 1 шт</p>
-																</div>
-																<div
-																	class="rs-catalog-product__warning _rs-icon-warning">
-																	Минимальное количество заказа — 50 шт
-																</div>
-																<div class="rs-catalog-product__button">
-																	<a href="#" data-popup="#popup-feedback"
-																		class="rs-btn _btn-primary">
-																		<span>Добавить в корзину</span>
-																		<svg viewBox="-5 -5 110 110"
-																			preserveAspectRatio="none"
-																			aria-hidden="true">
-																			<path
-																				d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
-																		</svg>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="rs-catalog__item">
-													<div class="rs-catalog-product">
-														<div class="rs-catalog-product__item">
-															<div class="rs-catalog-product__picture">
-																<div class="rs-catalog-product__img">
-																	<a href="#">
-																		<img src="./img/pages/product/prodict_fish.jpg"
-																			alt="">
-																	</a>
-																</div>
-															</div>
-															<div class="rs-catalog-product__action">
-																<ul>
-																	<li><a href="#" class="fav-btn _rs-icon-fav"></a>
-																	</li>
-																</ul>
-															</div>
-															<div class="rs-catalog-product__description">
-																<h6 class="nunito--semibold-18">Пакет Zip-Lock 40х60 мм
-																	(гриппер)</h6>
-
-																<div data-showmore class="rs-catalog-product__table">
-																	<div data-showmore-content="163"
-																		class="rs-catalog-product__table__content">
-																		<table>
-																			<thead>
-																				<tr>
-																					<th>Количество</th>
-																					<th>Скидка</th>
-																				</tr>
-																			</thead>
-																			<tbody>
-																				<tr>
-																					<td>от 50 шт</td>
-																					<td>3%</td>
-																				</tr>
-																				<tr>
-																					<td>от 500 шт</td>
-																					<td>5%</td>
-																				</tr>
-																				<tr>
-																					<td>от 1 000 шт</td>
-																					<td>7%</td>
-																				</tr>
-																				<tr>
-																					<td>от 5 000 шт</td>
-																					<td>10%</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
-																	<button hidden data-showmore-button type="button"
-																		class="rs-catalog-product__table__more">
-																		<span>Показать ещё</span>
-																		<span>Скрыть</span>
-																	</button>
-																</div>
-															</div>
-
-															<div class="rs-catalog-product__info">
-																<div class="rs-catalog-product__status">
-																	<img src="./img/icons/status-green.svg" alt="">
-																	В наличии на складе
-																</div>
-																<div class="rs-catalog-product__prices">
-																	<h3 class="nunito--bold-28">446,50 ₽</h3>
-																	<p class="nunito--medium-14">19,86 ₽ за 1 шт</p>
-																</div>
-																<div
-																	class="rs-catalog-product__warning _rs-icon-warning">
-																	Минимальное количество заказа — 50 шт
-																</div>
-																<div class="rs-catalog-product__button">
-																	<a href="#" data-popup="#popup-feedback"
-																		class="rs-btn _btn-primary">
-																		<span>Добавить в корзину</span>
-																		<svg viewBox="-5 -5 110 110"
-																			preserveAspectRatio="none"
-																			aria-hidden="true">
-																			<path
-																				d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
-																		</svg>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="rs-catalog__item">
-													<div class="rs-catalog-product">
-														<div class="rs-catalog-product__item">
-															<div class="rs-catalog-product__picture">
-																<div class="rs-catalog-product__img">
-																	<a href="#">
-																		<img src="./img/pages/product/prodict_fish.jpg"
-																			alt="">
-																	</a>
-																</div>
-															</div>
-															<div class="rs-catalog-product__action">
-																<ul>
-																	<li><a href="#" class="fav-btn _rs-icon-fav"></a>
-																	</li>
-																</ul>
-															</div>
-															<div class="rs-catalog-product__description">
-																<h6 class="nunito--semibold-18">Пакет Zip-Lock 40х60 мм
-																	(гриппер)</h6>
-
-																<div data-showmore class="rs-catalog-product__table">
-																	<div data-showmore-content="163"
-																		class="rs-catalog-product__table__content">
-																		<table>
-																			<thead>
-																				<tr>
-																					<th>Количество</th>
-																					<th>Скидка</th>
-																				</tr>
-																			</thead>
-																			<tbody>
-																				<tr>
-																					<td>от 50 шт</td>
-																					<td>3%</td>
-																				</tr>
-																				<tr>
-																					<td>от 500 шт</td>
-																					<td>5%</td>
-																				</tr>
-																				<tr>
-																					<td>от 1 000 шт</td>
-																					<td>7%</td>
-																				</tr>
-																				<tr>
-																					<td>от 5 000 шт</td>
-																					<td>10%</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
-																	<button hidden data-showmore-button type="button"
-																		class="rs-catalog-product__table__more">
-																		<span>Показать ещё</span>
-																		<span>Скрыть</span>
-																	</button>
-																</div>
-															</div>
-
-															<div class="rs-catalog-product__info">
-																<div class="rs-catalog-product__status">
-																	<img src="./img/icons/status-green.svg" alt="">
-																	В наличии на складе
-																</div>
-																<div class="rs-catalog-product__prices">
-																	<h3 class="nunito--bold-28">446,50 ₽</h3>
-																	<p class="nunito--medium-14">19,86 ₽ за 1 шт</p>
-																</div>
-																<div
-																	class="rs-catalog-product__warning _rs-icon-warning">
-																	Минимальное количество заказа — 50 шт
-																</div>
-																<div class="rs-catalog-product__button">
-																	<a href="#" data-popup="#popup-feedback"
-																		class="rs-btn _btn-primary">
-																		<span>Добавить в корзину</span>
-																		<svg viewBox="-5 -5 110 110"
-																			preserveAspectRatio="none"
-																			aria-hidden="true">
-																			<path
-																				d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
-																		</svg>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="rs-catalog__item">
-													<div class="rs-catalog-product">
-														<div class="rs-catalog-product__item">
-															<div class="rs-catalog-product__picture">
-																<div class="rs-catalog-product__img">
-																	<a href="#">
-																		<img src="./img/pages/product/prodict_fish.jpg"
-																			alt="">
-																	</a>
-																</div>
-															</div>
-															<div class="rs-catalog-product__action">
-																<ul>
-																	<li><a href="#" class="fav-btn _rs-icon-fav"></a>
-																	</li>
-																</ul>
-															</div>
-															<div class="rs-catalog-product__description">
-																<h6 class="nunito--semibold-18">Пакет Zip-Lock 40х60 мм
-																	(гриппер)</h6>
-
-																<div data-showmore class="rs-catalog-product__table">
-																	<div data-showmore-content="163"
-																		class="rs-catalog-product__table__content">
-																		<table>
-																			<thead>
-																				<tr>
-																					<th>Количество</th>
-																					<th>Скидка</th>
-																				</tr>
-																			</thead>
-																			<tbody>
-																				<tr>
-																					<td>от 50 шт</td>
-																					<td>3%</td>
-																				</tr>
-																				<tr>
-																					<td>от 500 шт</td>
-																					<td>5%</td>
-																				</tr>
-																				<tr>
-																					<td>от 1 000 шт</td>
-																					<td>7%</td>
-																				</tr>
-																				<tr>
-																					<td>от 5 000 шт</td>
-																					<td>10%</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
-																	<button hidden data-showmore-button type="button"
-																		class="rs-catalog-product__table__more">
-																		<span>Показать ещё</span>
-																		<span>Скрыть</span>
-																	</button>
-																</div>
-															</div>
-
-															<div class="rs-catalog-product__info">
-																<div class="rs-catalog-product__status">
-																	<img src="./img/icons/status-green.svg" alt="">
-																	В наличии на складе
-																</div>
-																<div class="rs-catalog-product__prices">
-																	<h3 class="nunito--bold-28">446,50 ₽</h3>
-																	<p class="nunito--medium-14">19,86 ₽ за 1 шт</p>
-																</div>
-																<div
-																	class="rs-catalog-product__warning _rs-icon-warning">
-																	Минимальное количество заказа — 50 шт
-																</div>
-																<div class="rs-catalog-product__button">
-																	<a href="#" data-popup="#popup-feedback"
-																		class="rs-btn _btn-primary">
-																		<span>Добавить в корзину</span>
-																		<svg viewBox="-5 -5 110 110"
-																			preserveAspectRatio="none"
-																			aria-hidden="true">
-																			<path
-																				d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
-																		</svg>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="rs-catalog__item">
-													<div class="rs-catalog-product">
-														<div class="rs-catalog-product__item">
-															<div class="rs-catalog-product__picture">
-																<div class="rs-catalog-product__img">
-																	<a href="#">
-																		<img src="./img/pages/product/prodict_fish.jpg"
-																			alt="">
-																	</a>
-																</div>
-															</div>
-															<div class="rs-catalog-product__action">
-																<ul>
-																	<li><a href="#" class="fav-btn _rs-icon-fav"></a>
-																	</li>
-																</ul>
-															</div>
-															<div class="rs-catalog-product__description">
-																<h6 class="nunito--semibold-18">Пакет Zip-Lock 40х60 мм
-																	(гриппер)</h6>
-
-																<div data-showmore class="rs-catalog-product__table">
-																	<div data-showmore-content="163"
-																		class="rs-catalog-product__table__content">
-																		<table>
-																			<thead>
-																				<tr>
-																					<th>Количество</th>
-																					<th>Скидка</th>
-																				</tr>
-																			</thead>
-																			<tbody>
-																				<tr>
-																					<td>от 50 шт</td>
-																					<td>3%</td>
-																				</tr>
-																				<tr>
-																					<td>от 500 шт</td>
-																					<td>5%</td>
-																				</tr>
-																				<tr>
-																					<td>от 1 000 шт</td>
-																					<td>7%</td>
-																				</tr>
-																				<tr>
-																					<td>от 5 000 шт</td>
-																					<td>10%</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</div>
-																	<button hidden data-showmore-button type="button"
-																		class="rs-catalog-product__table__more">
-																		<span>Показать ещё</span>
-																		<span>Скрыть</span>
-																	</button>
-																</div>
-															</div>
-
-															<div class="rs-catalog-product__info">
-																<div class="rs-catalog-product__status">
-																	<img src="./img/icons/status-green.svg" alt="">
-																	В наличии на складе
-																</div>
-																<div class="rs-catalog-product__prices">
-																	<h3 class="nunito--bold-28">446,50 ₽</h3>
-																	<p class="nunito--medium-14">19,86 ₽ за 1 шт</p>
+																	<h3
+																		class="nunito--bold-28 rs-catalog-product__prices-main">
+																		446,50 ₽</h3>
+																	<p
+																		class="nunito--medium-14 rs-catalog-product__prices-one">
+																		19,86 ₽ за 1 шт</p>
 																</div>
 																<div
 																	class="rs-catalog-product__warning _rs-icon-warning">
@@ -1713,6 +801,9 @@
 	</div>
 
 	<script src="lib/scroll-reveal/scroll-reveal.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
+	<script src="https://unpkg.com/lightgallery@2.4.0/lightgallery.min.js"></script>
+	<script src="https://unpkg.com/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script>
 	<script src="lib/scroll-reveal/sr-setting.js"></script>
 	<script src="lib/swiper/swiper-bundle.min.js"></script>
 	<script src="lib/dynamic_adapt.js"></script>

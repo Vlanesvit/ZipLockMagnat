@@ -60,6 +60,10 @@ header {
 		}
 	}
 
+	@media (max-width: 991.98px) {
+		top: 0 !important;
+	}
+
 	// .rs-header__top
 	&__top {
 		background-color: #1b1921;
@@ -738,10 +742,32 @@ header {
 					justify-content: center;
 					flex-direction: column;
 					transition: color 0.3s ease 0s;
+					position: relative;
 
 					@media (any-hover: hover) {
 						&:hover {
 							color: #7e5ddd;
+						}
+					}
+
+					.badge {
+						position: absolute;
+						top: -2px;
+						right: 7px;
+						display: block;
+						color: #fff;
+						font-size: 12px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+						letter-spacing: 0.36px;
+						padding: 1px 3px;
+						border-radius: 15px;
+						background-color: #ff4757;
+
+						@media (max-width: 991.98px) {
+							font-size: 9.593px;
+							letter-spacing: 0.288px;
 						}
 					}
 

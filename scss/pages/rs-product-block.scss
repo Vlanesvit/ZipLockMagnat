@@ -290,7 +290,7 @@
 			}
 
 			&:not(:last-child) {
-				margin-bottom: 12px;
+				margin-bottom: 16px;
 			}
 
 			span:last-child {
@@ -321,7 +321,7 @@
 		grid-template-columns: repeat(5, 1fr);
 		gap: 8px;
 		margin-top: 16px;
-		margin-bottom: 26px;
+		margin-bottom: 23px;
 
 		@media (max-width: 1564.98px) {
 			grid-template-columns: repeat(3, 1fr);
@@ -347,7 +347,7 @@
 	&__sale {
 		&_head {
 			text-align: center;
-			padding: 2px 4px;
+			padding: 2px 8px;
 			border-radius: 6px;
 			background: #f26300;
 			color: #fff;
@@ -505,6 +505,7 @@
 				font-weight: 400;
 				line-height: 160%; /* 25.6px */
 				margin-bottom: 20px;
+				max-width: 992px;
 
 				@media (max-width: 1439.98px) {
 					font-size: 14px;
@@ -530,7 +531,7 @@
 		}
 
 		.rs-product-block__sale_head {
-			margin-bottom: 8px;
+			margin-bottom: 6px;
 			display: inline-block;
 		}
 
@@ -569,7 +570,7 @@
 			font-style: normal;
 			font-weight: 700;
 			line-height: 38px; /* 135.714% */
-			margin: 8px 0px 4px;
+			margin: 0px 0px 4px;
 
 			@media (max-width: 1439.98px) {
 				font-size: 24px;
@@ -722,7 +723,8 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			margin-top: 12px;
+			margin-top: 8px;
+
 			.rs-btn {
 				width: 100%;
 			}
@@ -789,7 +791,7 @@
 
 	&__info {
 		margin-top: 24px;
-		padding: 16px;
+		padding: 19px 16px 16px 19px;
 		border-radius: 8px;
 		background: #f3f6fb;
 
@@ -799,7 +801,7 @@
 		}
 
 		ul {
-			margin-top: 16px;
+			margin-top: 18px;
 
 			@media (max-width: 1439.98px) {
 				margin-top: 10px;

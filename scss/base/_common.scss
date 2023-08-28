@@ -118,7 +118,7 @@ section {
 }
 .nunito--semibold-16 {
 	font-style: normal;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 130%;
 }
 .nunito--semibold-15 {
@@ -648,11 +648,22 @@ section {
 					a {
 						width: 24px;
 						height: 24px;
-						background: transparent;
+						background: transparent !important;
 
 						&::before {
 							font-size: 24px;
 							color: #1a1a1f;
+						}
+
+						&.fav-btn {
+							&._active {
+								background: transparent !important;
+
+								&::before {
+									content: "\e90f";
+									color: #ff4757;
+								}
+							}
 						}
 					}
 				}
@@ -664,7 +675,6 @@ section {
 		}
 
 		.product__footer {
-			display: none;
 		}
 	}
 

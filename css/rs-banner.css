@@ -85,6 +85,12 @@
     padding-bottom: calc(20px + 20 * (100vw - 320px) / 1600);
   }
 }
+@media (min-width: 769px) {
+  .rs-banner.rs-banner-catalog {
+    margin-top: 35px;
+    height: 317px;
+  }
+}
 .rs-banner._pink-bg {
   background: -webkit-gradient(linear, left top, left bottom, from(#cd006e), to(#e70788));
   background: linear-gradient(180deg, #cd006e 0%, #e70788 100%);
