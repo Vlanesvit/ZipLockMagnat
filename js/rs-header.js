@@ -215,20 +215,20 @@ function catalog() {
 
 			// При закрытии или открытии дает отступ
 			if (!catalog.classList.contains('catalog-open')) {
-				if (document.querySelector('.rs-news') && document.querySelector('.menu-catalog__body')) {
-					document.querySelector('.rs-news').style.marginTop = "0px";
+				if (document.querySelector('.rs-main-content__sidebar') && document.querySelector('.menu-catalog__body')) {
+					document.querySelector('.rs-main-content__sidebar').style.marginTop = "0px";
 				}
 			} else {
-				if (document.querySelector('.rs-news') && document.querySelector('.menu-catalog__body')) {
-					document.querySelector('.rs-news').style.marginTop = heightBody;
+				if (document.querySelector('.rs-main-content__sidebar') && document.querySelector('.menu-catalog__body')) {
+					document.querySelector('.rs-main-content__sidebar').style.marginTop = heightBody;
 				}
 			}
 		})
 
 		function addMargin() {
 			// Отступ блоку новостей
-			if (document.querySelector('.rs-news') && document.querySelector('.menu-catalog__body')) {
-				document.querySelector('.rs-news').style.marginTop = heightBody;
+			if (document.querySelector('.rs-main-content__sidebar') && document.querySelector('.menu-catalog__body')) {
+				document.querySelector('.rs-main-content__sidebar').style.marginTop = heightBody;
 			}
 		}
 		window.addEventListener('load', function () {
@@ -239,8 +239,8 @@ function catalog() {
 				_slideUp(catalogBody, 500)
 				catalog.classList.remove('catalog-open')
 
-				if (document.querySelector('.rs-news') && document.querySelector('.menu-catalog__body')) {
-					document.querySelector('.rs-news').style.marginTop = "0px";
+				if (document.querySelector('.rs-main-content__sidebar') && document.querySelector('.menu-catalog__body')) {
+					document.querySelector('.rs-main-content__sidebar').style.marginTop = "0px";
 				}
 			}
 		})

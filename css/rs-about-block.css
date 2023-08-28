@@ -17,7 +17,7 @@
 }
 @media (max-width: 767.98px) {
   .rs-about-block__wrapper {
-    padding: 15px;
+    padding: 20px 15px;
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -40,12 +40,30 @@
   margin-bottom: 20px;
   max-width: calc(100% - 70px);
 }
+@media (max-width: 1439.98px) {
+  .rs-about-block__left > p {
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
 .rs-about-block__left > p:nth-child(3) {
   margin-top: 24px;
+}
+@media (max-width: 1439.98px) {
+  .rs-about-block__left > p:nth-child(3) {
+    margin-top: 15px;
+  }
 }
 .rs-about-block__left > ul {
   margin: 20px 0px;
   max-width: calc(100% - 70px);
+}
+@media (max-width: 1439.98px) {
+  .rs-about-block__left > ul {
+    max-width: 100%;
+    margin: 10px 0px;
+  }
 }
 .rs-about-block__left > ul li {
   color: #6c6b6b;
@@ -61,6 +79,11 @@
       -ms-flex-align: start;
           align-items: flex-start;
 }
+@media (max-width: 1439.98px) {
+  .rs-about-block__left > ul li {
+    font-size: 14px;
+  }
+}
 .rs-about-block__left > ul li::before {
   content: "";
   min-width: 6px;
@@ -74,8 +97,19 @@
   background-color: #7e5ddd;
   border-radius: 50%;
 }
+@media (max-width: 1439.98px) {
+  .rs-about-block__left > ul li::before {
+    margin-right: 15px;
+    margin-left: 3px;
+  }
+}
 .rs-about-block__left > ul li:not(:last-child) {
   margin-bottom: 22px;
+}
+@media (max-width: 1439.98px) {
+  .rs-about-block__left > ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 .rs-about-block__left > .rs-btn {
   margin-top: 32px;
@@ -336,6 +370,11 @@
 .rs-about-block__list {
   padding-top: 58px;
 }
+@media (max-width: 1439.98px) {
+  .rs-about-block__list {
+    padding-top: 0px;
+  }
+}
 .rs-about-block__list_item {
   border-radius: 8px;
   background: #fff;
@@ -346,6 +385,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (max-width: 1169.98px) {
+  .rs-about-block__list_item {
+    padding: 10px;
+  }
 }
 .rs-about-block__list_item:not(:last-child) {
   margin-bottom: 8px;

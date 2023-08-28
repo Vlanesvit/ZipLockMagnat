@@ -212,6 +212,12 @@ section {
 	padding: 12px 24px;
 	border-radius: 8px;
 
+	@media (max-width: 991.98px) {
+		font-size: 14px;
+		line-height: 24px;
+		padding: 10px 16px;
+	}
+
 	& span {
 		display: block;
 		position: relative;

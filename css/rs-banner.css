@@ -69,7 +69,7 @@
 }
 @media (min-width: 769px) and (max-width: 1920px) {
   .rs-banner.rs-banner-small .rs-btn {
-    margin-top: calc(15px + 9 * (100vw - 320px) / 1600);
+    margin-top: calc(10px + 14 * (100vw - 320px) / 1600);
   }
 }
 @media (min-width: 769px) {
@@ -393,6 +393,14 @@
 }
 @media (max-width: 1920px) {
   .rs-banner__description .rs-btn {
-    margin-top: calc(15px + 45 * (100vw - 320px) / 1600);
+    margin-top: calc(10px + 50 * (100vw - 320px) / 1600);
+  }
+}
+@media (max-width: 767.98px) {
+  .rs-banner__description .rs-btn {
+    width: 100%;
+    line-height: 24px;
+    font-size: 13px;
+    padding: 7px 14px;
   }
 }

@@ -276,80 +276,6 @@
 				</div>
 			</section>
 
-			<div id="popup-feedback" class="popup popup-feedback">
-				<div class="popup__wrapper">
-					<div class="popup__content">
-						<button data-close type="button" class="popup__close _rs-icon-close"></button>
-						<div class="popup__text">
-							<div class="popup__part">
-								<h2 class="nunito--regular-40">Свяжитесь с нами </h2>
-								<p class="nunito--regular-16">Оставьте заявку, наш менеджер свяжется с вами
-									в ближайшее время</p>
-								<div class="form">
-									<form action="#">
-										<div class="form__wrapper">
-											<div class="form__block">
-												<div class="form__line">
-													<label for="user-popup-name"
-														class="rs-input-placeholder">ФИО</label>
-													<input id="user-popup-name" type="text" name="form[]" data-required
-														data-validate data-error="Введите ФИО" required
-														class="rs-input">
-													<button type="button"
-														class="rs-input-clear _rs-icon-close"></button>
-												</div>
-												<div class="form__line">
-													<label for="user-popup-phone"
-														class="rs-input-placeholder">Телефон</label>
-													<input id="user-popup-phone" type="tel" name="form[]"
-														data-required="tel" data-validate required
-														data-error="Введите телефон" class="rs-input">
-													<button type="button"
-														class="rs-input-clear _rs-icon-close"></button>
-												</div>
-												<div class="form__line">
-													<label for="user-popup-email"
-														class="rs-input-placeholder">E-mail</label>
-													<input id="user-popup-email" type="email" name="form[]"
-														data-required="email" data-validate required
-														data-error="Введите e-mail" class="rs-input">
-													<button type="button"
-														class="rs-input-clear _rs-icon-close"></button>
-												</div>
-												<div class="form__line">
-													<label for="user-popup-message" class="rs-input-placeholder">Введите
-														ваше сообщение</label>
-													<textarea id="user-popup-message" name="form[]"
-														class="rs-input"></textarea>
-													<button type="button"
-														class="rs-input-clear _rs-icon-close"></button>
-												</div>
-											</div>
-											<div class="form__footer">
-												<div class="form__agreement">Нажимая на кнопку «Отправить сообщение», Вы
-													соглашаетесь на обработку персональных данных в соответствии с
-													<a href="#">пользовательским соглашением</a>
-												</div>
-												<div class="form__button">
-													<button type="submit" class="rs-btn _btn-primary">
-														<span>Отправить сообщение</span>
-														<svg viewBox="-5 -5 110 110" preserveAspectRatio="none"
-															aria-hidden="true">
-															<path
-																d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
-														</svg>
-													</button>
-												</div>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
 		</main>
 
 		<link rel="stylesheet" href="css/rs-footer.css">
@@ -478,6 +404,70 @@
 			</div>
 		</footer>
 
+	</div>
+
+	<div id="popup-feedback" class="popup popup-feedback">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _rs-icon-close"></button>
+				<div class="popup__text">
+					<div class="popup__part">
+						<h2 class="nunito--regular-40">Свяжитесь с нами </h2>
+						<p class="nunito--regular-16">Оставьте заявку, наш менеджер свяжется с вами
+							в ближайшее время</p>
+						<div class="form">
+							<form action="#">
+								<div class="form__wrapper">
+									<div class="form__block">
+										<div class="form__line">
+											<label for="user-popup-name" class="rs-input-placeholder">ФИО</label>
+											<input id="user-popup-name" type="text" name="form[]" data-required
+												data-validate data-error="Введите ФИО" required class="rs-input">
+											<button type="button" class="rs-input-clear _rs-icon-close"></button>
+										</div>
+										<div class="form__line">
+											<label for="user-popup-phone" class="rs-input-placeholder">Телефон</label>
+											<input id="user-popup-phone" type="tel" name="form[]" data-required="tel"
+												data-validate required data-error="Введите телефон" class="rs-input">
+											<button type="button" class="rs-input-clear _rs-icon-close"></button>
+										</div>
+										<div class="form__line">
+											<label for="user-popup-email" class="rs-input-placeholder">E-mail</label>
+											<input id="user-popup-email" type="email" name="form[]"
+												data-required="email" data-validate required data-error="Введите e-mail"
+												class="rs-input">
+											<button type="button" class="rs-input-clear _rs-icon-close"></button>
+										</div>
+										<div class="form__line">
+											<label for="user-popup-message" class="rs-input-placeholder">Введите
+												ваше сообщение</label>
+											<textarea id="user-popup-message" name="form[]" class="rs-input"></textarea>
+											<button type="button" class="rs-input-clear _rs-icon-close"></button>
+										</div>
+									</div>
+									<div class="form__footer">
+										<div class="form__agreement">Нажимая на кнопку «Отправить сообщение», Вы
+											соглашаетесь на обработку персональных данных в соответствии с
+											<a href="#">пользовательским соглашением</a>
+										</div>
+										<div class="form__button">
+											<button type="submit" class="rs-btn _btn-primary">
+												<span>Отправить сообщение</span>
+												<svg viewBox="-5 -5 110 110" preserveAspectRatio="none"
+													aria-hidden="true">
+													<path
+														d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script src="lib/scroll-reveal/scroll-reveal.js"></script>

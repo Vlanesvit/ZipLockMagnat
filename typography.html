@@ -693,9 +693,14 @@
 								<div class="rs-calc__order">
 									<div class="rs-calc__order_head">
 										<h6 class="nunito--semibold-18">Предварительный заказ </h6>
-										<a href="#" class="_rs-icon-copy">Скопировать</a>
+										<a href="#" class="_rs-icon-copy rs-calc__order_head-copy"
+											data-da=".rs-calc__order_body, 991.98, last">Скопировать</a>
+										<button type="button" class="rs-calc__order_open">
+											<span>Подробности заказа</span>
+											<span>Скрыть</span>
+										</button>
 									</div>
-									<div class="rs-calc__order_body">
+									<div class="rs-calc__order_body" hidden>
 										<ul>
 											<li>Тип: <span>пакет с бегунком</span></li>
 											<li>Формат логотипа: <span> А1 — 100 ₽</span> </li>
@@ -972,7 +977,7 @@
 					<div class="rs-list-block__wrapper">
 						<h6 class="nunito--semibold-18">Цены указаны с учетом НДС</h6>
 
-						<div class="rs-list-block__list">
+						<div class="rs-list-block__list rs-list-block__list-center">
 							<div class="rs-list-block__block">
 								<div class="rs-list-block__item">
 									<div class="rs-list-block__head">
@@ -1174,8 +1179,8 @@
 					<div class="rs-project__wrapper">
 						<div class="rs-project__head">
 							<div class="rs-project__title">
-								<h6 class="nunito--semibold-12 line-title">как мы работаем</h6>
-								<h2 class="nunito--semibold-32">Схема работы фулфилмента</h2>
+								<h6 class="nunito--semibold-12 line-title">портфолио</h6>
+								<h2 class="nunito--semibold-32">Наши работы</h2>
 							</div>
 
 							<div class="rs-project__buttons">
@@ -1575,6 +1580,38 @@
 		</footer>
 
 	</div>
+
+	<div id="popup-order" class="popup popup-order">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _rs-icon-close"></button>
+				<div class="popup__text">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="popup-thanks" class="popup popup-thanks">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _rs-icon-close"></button>
+				<div class="popup__text">
+					<img src="./img/pages/modal/order-end.png" alt="">
+					<h2 class="nunito--semibold-32">Заказ успешно оформлен!</h2>
+					<p class="nunito--regular-14">В ближайшее время мы свяжемся с вами</p>
+					<button type="button" class="rs-btn _btn-primary popup__close">
+						<span>Понятно</span>
+						<svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
+							<path
+								d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	<script src="lib/scroll-reveal/scroll-reveal.js"></script>
 	<script src="lib/scroll-reveal/sr-setting.js"></script>
