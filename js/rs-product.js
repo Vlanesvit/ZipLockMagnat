@@ -6,6 +6,7 @@ function initNewProductSliders() {
 	const product4x2 = document.querySelectorAll('.rs-product.rs-product-4x2');
 	const product3x2 = document.querySelectorAll('.rs-product.rs-product-3x2');
 	const product4x1 = document.querySelectorAll('.rs-product.rs-product-4x1');
+	const product5x1 = document.querySelectorAll('.rs-product.rs-product-5x1');
 
 	product4x2.forEach(product => {
 		const productNext = product.querySelector('.rs-product__button-next');
@@ -220,6 +221,73 @@ function initNewProductSliders() {
 		});
 	});
 
+	product5x1.forEach(product => {
+		const productNext = product.querySelector('.rs-product__button-next');
+		const productPrev = product.querySelector('.rs-product__button-prev');
+		const productSlider = product.querySelector('.rs-product__slider');
+
+		// Перечень слайдеров
+		new Swiper(productSlider, {
+			// // Автопрокрутка
+			// autoplay: {
+			// 	// Пауза между прокруткой
+			// 	delay: 5000,
+			// 	// Закончить на последнем слайде
+			// 	stopOnLastSlide: false,
+			// 	// Отключить после ручного переключения
+			// 	disableOnInteraction: false,
+			// },
+
+			// Обновить свайпер
+			// при изменении элементов слайдера
+			observer: true,
+			// при изменении родительских элементов слайдера
+			observeParents: true,
+			// при изменении дочерних элементов слайдера
+			observeSlideChildren: true,
+			// Скорость смены слайдов
+			speed: 500,
+			// Включение/отключение
+			// перетаскивание на ПК
+			simulateTouch: true,
+			// Чувствительность свайпа
+			touchRadio: 1,
+			// Угол срабатывания свайпа/перетаскивания
+			touchAngle: 45,
+			grabCursor: true,
+
+			navigation: {
+				nextEl: productNext,
+				prevEl: productPrev,
+			},
+
+			// Брейкпоинты(адаптив)
+			// Шрина экрана
+			breakpoints: {
+				320: {
+					slidesPerView: 1.15,
+					spaceBetween: 20,
+				},
+				540: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1169: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				1350: {
+					slidesPerView: 5,
+					spaceBetween: 30,
+				},
+			},
+		});
+	});
+
 }
 
 window.addEventListener("load", function (e) {
@@ -231,7 +299,7 @@ window.addEventListener("load", function (e) {
 Кнопка избранное
 ==================================== */
 function favProduct() {
-	const favBtn = document.querySelectorAll('.product__action .fav-btn')
+	const favBtn = document.querySelectorAll('.fav-btn')
 
 	favBtn.forEach(btn => {
 		btn.addEventListener('click', function () {

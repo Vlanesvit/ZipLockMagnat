@@ -116,6 +116,11 @@ section {
 	font-size: 18px;
 	line-height: 23px;
 }
+.nunito--semibold-16 {
+	font-style: normal;
+	font-size: 15px;
+	line-height: 130%;
+}
 .nunito--semibold-15 {
 	font-style: normal;
 	font-size: 15px;
@@ -301,8 +306,54 @@ section {
 		}
 	}
 
+	&._btn-second {
+		color: #7e5ddd;
+		background-color: #ece7fa;
+
+		& svg {
+			fill: #ece7fa;
+		}
+	}
+
 	&._btn-text-bold {
 		font-weight: 700;
+	}
+}
+
+.rs-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	color: #7e5ddd;
+	text-align: center;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%; /* 21px */
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 3px;
+		right: 0;
+		width: 0%;
+		height: 1px;
+		background-color: #7e5ddd;
+		display: block;
+		transition: width 0.3s ease 0s;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			&::after {
+				left: 0;
+				width: 100%;
+			}
+		}
 	}
 }
 
@@ -803,7 +854,7 @@ section {
 		background: #7e5ddd;
 		border: 1px solid #7e5ddd;
 		border-radius: 0px 0px 8px 8px;
-		transform: translateY(100%);
+		transform: translateY(calc(100% + 1px));
 		transition: transform 0.3s ease 0s;
 
 		a {

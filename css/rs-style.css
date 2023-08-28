@@ -476,6 +476,12 @@ section {
   line-height: 23px;
 }
 
+.nunito--semibold-16 {
+  font-style: normal;
+  font-size: 15px;
+  line-height: 130%;
+}
+
 .nunito--semibold-15 {
   font-style: normal;
   font-size: 15px;
@@ -672,8 +678,55 @@ section {
 .rs-btn._btn-white-border svg {
   fill: transparent;
 }
+.rs-btn._btn-second {
+  color: #7e5ddd;
+  background-color: #ece7fa;
+}
+.rs-btn._btn-second svg {
+  fill: #ece7fa;
+}
 .rs-btn._btn-text-bold {
   font-weight: 700;
+}
+
+.rs-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #7e5ddd;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 21px */
+}
+.rs-link::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #7e5ddd;
+  display: block;
+  -webkit-transition: width 0.3s ease 0s;
+  transition: width 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .rs-link:hover::after {
+    left: 0;
+    width: 100%;
+  }
 }
 
 .rs-placeholder {
@@ -1132,9 +1185,9 @@ section {
   background: #7e5ddd;
   border: 1px solid #7e5ddd;
   border-radius: 0px 0px 8px 8px;
-  -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(calc(100% + 1px));
+      -ms-transform: translateY(calc(100% + 1px));
+          transform: translateY(calc(100% + 1px));
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
@@ -1565,13 +1618,32 @@ section {
     margin-bottom: 20px;
   }
 }
-.rs-breadcrumbs__container > h2 {
+.rs-breadcrumbs__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0px 0px 24px;
   border-bottom: 1px solid #eaeaea;
 }
 @media (max-width: 991.98px) {
-  .rs-breadcrumbs__container > h2 {
+  .rs-breadcrumbs__block {
     padding-bottom: 16px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 .rs-breadcrumbs__navigation {
@@ -1925,4 +1997,54 @@ body::after {
 .popup__content .rs-input-clear::before {
   font-size: 16px;
   color: #565973;
+}
+
+.quantity {
+  width: 88px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid rgba(166, 166, 166, 0.45);
+}
+.quantity__button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30px;
+          flex: 0 0 30px;
+  position: relative;
+  cursor: pointer;
+}
+.quantity__button::before, .quantity__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin: 0px 0px 0px -4.5px;
+  background-color: #a6a6a6;
+  width: 9px;
+  height: 1px;
+}
+@media (any-hover: hover) {
+  .quantity__button:hover::before, .quantity__button:hover::after {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+.quantity__button_plus::before {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.quantity__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.quantity__input input {
+  height: 100%;
+  color: #a6a6a6;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
 }

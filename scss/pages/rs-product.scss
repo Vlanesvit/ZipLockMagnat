@@ -20,6 +20,16 @@
 	&.rs-product-3x2 {
 	}
 
+	&.rs-product-5x1 {
+		margin-top: 80px;
+		margin-bottom: 120px;
+
+		@media (max-width: 1439.98px) {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+	}
+
 	&__header {
 		margin-bottom: 24px;
 		display: flex;
