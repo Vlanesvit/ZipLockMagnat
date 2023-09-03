@@ -121,6 +121,11 @@
             justify-content: flex-end;
   }
 }
+@media (max-width: 375px) {
+  .rs-slider__description {
+    max-width: 300px;
+  }
+}
 .rs-slider__button {
   text-align: right;
 }
@@ -221,8 +226,8 @@
 .rs-slider__pagination.rs-slider__pagination-inversion .swiper-pagination-bullet-active {
   background-color: #fff;
 }
-.rs-slider__navigation.rs-slider__navigation-inversion .swiper-button-next,
-.rs-slider__navigation.rs-slider__navigation-inversion .swiper-button-prev {
+.rs-slider__navigation.rs-slider__navigation-inversion .swiper-button-next::before,
+.rs-slider__navigation.rs-slider__navigation-inversion .swiper-button-prev::before {
   color: #fff;
 }
 

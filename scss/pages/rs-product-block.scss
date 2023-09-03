@@ -245,6 +245,7 @@
 			border-radius: 8px;
 			border: 2px solid transparent;
 			transition: all 0.3s ease 0s;
+			position: relative;
 
 			&.swiper-slide-thumb-active {
 				border-color: #7e5ddd;
@@ -252,6 +253,22 @@
 
 			@media (max-width: 767.98px) {
 				height: auto;
+			}
+
+			&.rs-thumbs__video {
+				&::before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 32px;
+					height: 32px;
+					background-image: url('../img/icons/play-icon.svg');
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
 			}
 		}
 	}
@@ -296,6 +313,7 @@
 			span:last-child {
 				text-align: left;
 				color: #1a1a1f;
+				font-weight: 500;
 
 				@media (min-width: 1171px) {
 					max-width: 232px;

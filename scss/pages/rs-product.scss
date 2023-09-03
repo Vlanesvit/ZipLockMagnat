@@ -1,6 +1,7 @@
 .rs-product {
 	position: relative;
 	margin: 48px 0px;
+	z-index: 100;
 
 	@media (max-width: 1920px) {
 		margin: calc(30px + (48 - 30) * ((100vw - 320px) / (1920 - 320))) 0px;
@@ -18,6 +19,10 @@
 	}
 
 	&.rs-product-3x2 {
+		.rs-product__slider {
+			padding: 100px 0px;
+			margin: -100px 0px;
+		}
 	}
 
 	&.rs-product-5x1 {

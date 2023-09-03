@@ -1211,6 +1211,62 @@ if (document.querySelector('[data-tabs]')) {
 	modules.popup = new Popup({});
 })();
 
+/* ====================================
+// Загрузка изображений и вывод его названия
+==================================== */
+function uploadImage() {
+	const uploads = document.querySelectorAll('.upload');
+
+	uploads.forEach(upload => {
+		const uploadInput = upload.querySelector('.upload__input');
+		const uploadText = upload.querySelector('.upload__label');
+		const uploadLoad = upload.querySelector('.upload__load');
+		const uploadDel = upload.querySelector('.upload__del');
+		let uploadFiles = "";
+
+		function uploadPicture(file, size, input) {
+			// // Проверка на формат
+			// if (!['.png', '.pdf', '.ai', '.cdr', '.psd'].includes(file.type)) {
+			// 	alert('Выбран неверный формат файла');
+			// 	// Очистка
+			// 	input.value = '';
+			// 	uploadFiles = '';
+			// 	input.parentNode.querySelector('.upload__label').innerText = 'Выберите файл в формате png, pdf, ai, cdr, psd';
+			// 	return;
+			// }
+			// // Проверка на размер
+			// else 
+			if (file.size > size * 1000) {
+				alert(`Файл должен быть не более ${size}мб`);
+				// Очистка
+				input.value = '';
+				uploadFiles = '';
+				input.parentNode.querySelector('.upload__label').innerText = 'Выберите файл в формате png, pdf, ai, cdr, psd';
+				document.documentElement.classList.remove('_file-load')
+				return;
+			}
+			uploadText.innerText = input.value.match(/[\/\\]([\w\d\s\.\-(\)]+)$/)[1];
+			document.documentElement.classList.add('_file-load')
+
+			// Удаляем
+			uploadDel.addEventListener('click', function () {
+				input.value = '';
+				uploadFiles = '';
+				input.parentNode.querySelector('.upload__label').innerText = 'Выберите файл в формате png, pdf, ai, cdr, psd';
+				document.documentElement.classList.remove('_file-load')
+			})
+		}
+
+		uploadInput.addEventListener('change', function () {
+			for (let i = 0; i < uploadInput.files.length; ++i) {
+				uploadPicture(uploadInput.files.item(i), 100, uploadInput);
+			}
+		});
+	});
+}
+if (document.querySelector('.upload')) {
+	uploadImage()
+}
 
 /* ====================================
 Инициализация галереи
@@ -1220,28 +1276,28 @@ data-gallery - блок галереи
 data-gallery-item - блок с картинкой
 data-src - ссылка на картинку 
 */
-// if (document.querySelector('[data-gallery]')) {
-// 	const galleries = document.querySelectorAll('[data-gallery]');
-// 	if (galleries.length) {
-// 		let galleyItems = [];
-// 		galleries.forEach(gallery => {
-// 			galleyItems.push({
-// 				gallery,
-// 				galleryClass: lightGallery(gallery, {
-// 					plugins: [lgZoom],
-// 					licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
-// 					selector: '[data-gallery-item]',
-// 					// Скорость
-// 					speed: 800,
-// 					// Отключить кнопку Скачать
-// 					download: false,
-// 					// Надпись под фото (Вывод атрибута alt у img)
-// 					appendSubHtmlTo: false,
-// 				})
-// 			})
-// 		});
-// 	}
-// }
+if (document.querySelector('[data-gallery]')) {
+	const galleries = document.querySelectorAll('[data-gallery]');
+	if (galleries.length) {
+		let galleyItems = [];
+		galleries.forEach(gallery => {
+			galleyItems.push({
+				gallery,
+				galleryClass: lightGallery(gallery, {
+					plugins: [lgZoom],
+					licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
+					selector: '[data-gallery-item]',
+					// Скорость
+					speed: 800,
+					// Отключить кнопку Скачать
+					download: false,
+					// Надпись под фото (Вывод атрибута alt у img)
+					appendSubHtmlTo: false,
+				})
+			})
+		});
+	}
+}
 
 /* ====================================
 Блок "Показать больше"

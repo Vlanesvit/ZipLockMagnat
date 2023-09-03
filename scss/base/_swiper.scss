@@ -153,7 +153,6 @@
 	justify-content: center;
 	color: inherit;
 	transition: all 0.3s ease 0s;
-	color: #1a1a1f;
 
 	@media (max-width: 1920px) {
 		width: calc(29px + (52 - 29) * ((100vw - 320px) / (1920 - 320)));
@@ -162,6 +161,8 @@
 
 	&::before {
 		font-size: 52px;
+		color: #1a1a1f;
+		transition: all 0.3s ease 0s;
 
 		@media (max-width: 1920px) {
 			font-size: calc(29px + (52 - 29) * ((100vw - 320px) / (1920 - 320)));
@@ -170,7 +171,9 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			opacity: 0.3;
+			&::before {
+				color: #7e5ddd !important;
+			}
 		}
 	}
 }

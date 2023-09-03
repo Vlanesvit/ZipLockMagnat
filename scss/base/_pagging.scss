@@ -10,7 +10,7 @@
 
 	&.search-pagging {
 		justify-content: flex-start;
-margin-top: 0px;
+		margin-top: 0px;
 		@media (max-width: 767.98px) {
 		}
 
@@ -27,9 +27,8 @@ margin-top: 0px;
 
 			&.pagging__arrow_start {
 				margin-right: 10px;
-				color: var(--primary-color);
-				padding-bottom: 2px;
-				border-bottom: 1px solid var(--primary-color);
+				color: #6c6b6b;
+				border-bottom: 1px solid #6c6b6b;
 
 				@media (max-width: 767.98px) {
 					display: none;
@@ -38,9 +37,8 @@ margin-top: 0px;
 
 			&.pagging__arrow_end {
 				margin-left: 10px;
-				color: var(--primary-color);
-				padding-bottom: 2px;
-				border-bottom: 1px solid var(--primary-color);
+				color: #6c6b6b;
+				border-bottom: 1px solid #6c6b6b;
 
 				@media (max-width: 767.98px) {
 					display: none;

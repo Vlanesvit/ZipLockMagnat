@@ -694,6 +694,167 @@
 
 	</div>
 
+	<div id="popup-feedback" class="popup popup-feedback">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _rs-icon-close"></button>
+				<div class="popup__text">
+					<div class="popup__part">
+						<h2 class="nunito--regular-40">Свяжитесь с нами </h2>
+						<p class="nunito--regular-16">Оставьте заявку, наш менеджер свяжется с вами
+							в ближайшее время</p>
+						<form action="#" class="form form-feedback">
+							<div class="form__wrapper">
+								<div class="form__block">
+									<div class="form__line">
+										<label for="user-popup-name" class="rs-input-placeholder">ФИО</label>
+										<input id="user-popup-name" type="text" name="form[]" data-required
+											data-validate data-error="Введите ФИО" required class="rs-input">
+										<button type="button" class="rs-input-clear _rs-icon-close"></button>
+									</div>
+									<div class="form__line">
+										<label for="user-popup-phone" class="rs-input-placeholder">Телефон</label>
+										<input id="user-popup-phone" type="tel" name="form[]" data-required="tel"
+											data-validate required data-error="Введите телефон" class="rs-input">
+										<button type="button" class="rs-input-clear _rs-icon-close"></button>
+									</div>
+									<div class="form__line">
+										<label for="user-popup-email" class="rs-input-placeholder">E-mail</label>
+										<input id="user-popup-email" type="email" name="form[]" data-required="email"
+											data-validate required data-error="Введите e-mail" class="rs-input">
+										<button type="button" class="rs-input-clear _rs-icon-close"></button>
+									</div>
+									<div class="form__line">
+										<label for="user-popup-message" class="rs-input-placeholder">Введите
+											ваше сообщение</label>
+										<textarea id="user-popup-message" name="form[]" class="rs-input"></textarea>
+										<button type="button" class="rs-input-clear _rs-icon-close"></button>
+									</div>
+								</div>
+								<div class="form__footer">
+									<div class="form__agreement">Нажимая на кнопку «Отправить сообщение», Вы
+										соглашаетесь на обработку персональных данных в соответствии с
+										<a href="#">пользовательским соглашением</a>
+									</div>
+									<div class="form__button">
+										<button type="submit" class="rs-btn _btn-primary">
+											<span>Отправить сообщение</span>
+											<svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
+												<path
+													d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="popup-order" class="popup popup-order">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _rs-icon-close"></button>
+				<div class="popup__text">
+					<h2 class="nunito--semibold-32">Оформление заказа</h2>
+
+					<form action="#" class="form form-order">
+						<div class="form__wrapper">
+							<div class="form__block">
+								<div class="form__line">
+									<label class="rs-placeholder">Ваше имя*</label>
+									<input autocomplete="off" type="text" name="form[]" placeholder="Введите ваше имя"
+										data-required data-validate data-error="Введите ваше имя" required
+										class="rs-input">
+								</div>
+
+								<div class="form__line">
+									<label class="rs-placeholder">Ваш телефон*</label>
+									<input autocomplete="off" type="tel" name="form[]" placeholder="+7 (___) ___-__-__"
+										data-required data-validate data-error="Введите ваш телефон" required
+										class="rs-input">
+								</div>
+
+								<div class="form__line">
+									<label class="rs-placeholder">Ваш e-mail*</label>
+									<input autocomplete="off" type="text" name="form[]" placeholder="Введите ваш e-mail"
+										data-required="email" data-validate required data-error="Введите email"
+										class="rs-input">
+								</div>
+
+
+								<div class="form__upload upload">
+									<label class="rs-placeholder">Если есть макет, прикрепите (необязательно)</label>
+									<div class="upload__block">
+										<input type="file" name="form[]" class="upload__input"
+											accept=".png, .pdf, .ai, .cdr, .psd">
+										<div class="upload__label">Выберите файл в формате png, pdf, ai, cdr, psd</div>
+										<button type="button"
+											class="upload__btn upload__load _rs-icon-upload"><span>Прикрепить</span></button>
+										<button type="button"
+											class="upload__btn upload__del _rs-icon-close"><span>Удалить</span></button>
+									</div>
+									<div class="upload__hint">Максимальный размер файла — 10 Мб</div>
+								</div>
+							</div>
+
+							<div class="form__detail">
+								<h6 class="nunito--semibold-18">Ваш заказ</h6>
+								<p class="nunito--semibold-14">Брендирование, цветов печати: 1</p>
+
+								<div class="form__detail_block">
+									<ul class="form__detail_list">
+										<li>Тираж: <span>100 шт.</span></li>
+										<li>Цена за единицу: <span>20,27 ₽</span></li>
+										<li>Формат логотипа: <span>А1 — 100 ₽</span></li>
+									</ul>
+
+									<div class="form__detail_info">
+										<h6 class="nunito--semibold-18">Итого: <span>2027 ₽</span></h6>
+										<p class="nunito--regular-12">Срок изготовления: 5-7 дн.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="form__button">
+								<button type="submit" class="rs-btn _btn-primary">
+									<span>Отправить</span>
+									<svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
+										<path
+											d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
+									</svg>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="popup-thanks" class="popup popup-thanks">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _rs-icon-close"></button>
+				<div class="popup__text">
+					<img src="./img/pages/modal/order-end.png" alt="">
+					<h2 class="nunito--semibold-32">Заказ успешно оформлен!</h2>
+					<p class="nunito--regular-14">В ближайшее время мы свяжемся с вами</p>
+					<button type="button" data-close class="rs-btn _btn-primary">
+						<span>Понятно</span>
+						<svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
+							<path
+								d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="lib/scroll-reveal/scroll-reveal.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
 	<script src="https://unpkg.com/lightgallery@2.4.0/lightgallery.min.js"></script>

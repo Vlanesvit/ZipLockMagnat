@@ -127,6 +127,10 @@
 		@media (max-width: 992px) {
 			justify-content: flex-end;
 		}
+
+		@media (max-width: 375px) {
+			max-width: 300px;
+		}
 	}
 
 	&__button {
@@ -239,7 +243,9 @@
 		&.rs-slider__navigation-inversion {
 			.swiper-button-next,
 			.swiper-button-prev {
-				color: #fff;
+				&::before {
+					color: #fff;
+				}
 			}
 		}
 	}
