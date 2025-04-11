@@ -53,3 +53,29 @@ function openFilter() {
 }
 openFilter()
 
+function changeView() {
+	const catalogs = document.querySelectorAll('.rs-catalog')
+
+	catalogs.forEach(catalog => {
+		const displayBtns = catalog.querySelectorAll('.rs-catalog__display ul li a')
+		const catalogList = catalog.querySelector('.rs-catalog__list')
+
+		displayBtns.forEach(displayBtn => {
+			displayBtn.addEventListener('click', function (e) {
+				e.preventDefault();
+
+				displayBtns.forEach(otherBtn => {
+					otherBtn.classList.remove('_active');
+				})
+
+				displayBtn.classList.add('_active');
+
+				let view = displayBtn.getAttribute('data-view');
+
+				catalogList.setAttribute('data-view', view)
+
+			})
+		});
+	});
+}
+changeView()

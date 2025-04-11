@@ -270,7 +270,13 @@
 				<div class="rs-main-content__container">
 					<div class="rs-main-content__wrapper">
 						<div class="rs-main-content__sidebar">
-
+							<div class="rs-catalog__category">
+								<ul>
+									<li><a href="#">Электрические скутеры </a></li>
+									<li><a href="#">Электрические велосипеды</a></li>
+									<li><a href="#">Электрические самокаты</a></li>
+								</ul>
+							</div>
 						</div>
 
 						<div class="rs-main-content__block">
@@ -335,40 +341,449 @@
 
 							<section class="rs-catalog">
 								<div class="rs-catalog__container">
-									<div class="rs-catalog__category">
-										<div class="rs-catalog__category_list">
-											<div class="rs-catalog__category_item">
-												<a href="#">
-													<div class="rs-catalog__category_img">
-														<img src="./img/pages/product/prodict_fish.jpg" alt="">
+									<div class="rs-catalog__wrapper">
+										<div class="rs-catalog__content">
+											<div class="rs-catalog__head">
+												<!-- Для активного состояния нужно привязать класс _active к ссылке -->
+												<div class="rs-catalog__display">
+													<ul>
+														<li>
+															<a href="#" data-view="grid">
+																<svg width="24" height="24" viewBox="0 0 24 24"
+																	fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path fill-rule="evenodd" clip-rule="evenodd"
+																		d="M9 13C9.53043 13 10.0391 13.2107 10.4142 13.5858C10.7893 13.9609 11 14.4696 11 15V19C11 19.5304 10.7893 20.0391 10.4142 20.4142C10.0391 20.7893 9.53043 21 9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15C3 14.4696 3.21071 13.9609 3.58579 13.5858C3.96086 13.2107 4.46957 13 5 13H9ZM19 13C19.5046 12.9998 19.9906 13.1904 20.3605 13.5335C20.7305 13.8766 20.9572 14.3468 20.995 14.85L21 15V19C21.0002 19.5046 20.8096 19.9906 20.4665 20.3605C20.1234 20.7305 19.6532 20.9572 19.15 20.995L19 21H15C14.4954 21.0002 14.0094 20.8096 13.6395 20.4665C13.2695 20.1234 13.0428 19.6532 13.005 19.15L13 19V15C12.9998 14.4954 13.1904 14.0094 13.5335 13.6395C13.8766 13.2695 14.3468 13.0428 14.85 13.005L15 13H19ZM9 15H5V19H9V15ZM19 15H15V19H19V15ZM19 3C19.5046 2.99984 19.9906 3.19041 20.3605 3.5335C20.7305 3.87659 20.9572 4.34684 20.995 4.85L21 5V9C21.0002 9.50458 20.8096 9.99057 20.4665 10.3605C20.1234 10.7305 19.6532 10.9572 19.15 10.995L19 11H15C14.4954 11.0002 14.0094 10.8096 13.6395 10.4665C13.2695 10.1234 13.0428 9.65315 13.005 9.15L13 9V5C12.9998 4.49542 13.1904 4.00943 13.5335 3.63945C13.8766 3.26947 14.3468 3.04284 14.85 3.005L15 3H19ZM9 3C9.50458 2.99984 9.99057 3.19041 10.3605 3.5335C10.7305 3.87659 10.9572 4.34684 10.995 4.85L11 5V9C11.0002 9.50458 10.8096 9.99057 10.4665 10.3605C10.1234 10.7305 9.65315 10.9572 9.15 10.995L9 11H5C4.49542 11.0002 4.00943 10.8096 3.63945 10.4665C3.26947 10.1234 3.04284 9.65315 3.005 9.15L3 9V5C2.99984 4.49542 3.19041 4.00943 3.5335 3.63945C3.87659 3.26947 4.34684 3.04284 4.85 3.005L5 3H9ZM19 5H15V9H19V5ZM9 5H5V9H9V5Z"
+																		fill="#7E5DDD" />
+																</svg>
+															</a>
+														</li>
+														<li>
+															<a href="#" data-view="list" class="_active">
+																<svg width="24" height="24" viewBox="0 0 24 24"
+																	fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path fill-rule="evenodd" clip-rule="evenodd"
+																		d="M7 13C7.50458 12.9998 7.99057 13.1904 8.36055 13.5335C8.73053 13.8766 8.95716 14.3468 8.995 14.85L9 15V18C9.00016 18.5046 8.80959 18.9906 8.4665 19.3605C8.12341 19.7305 7.65316 19.9572 7.15 19.995L7 20H4C3.49542 20.0002 3.00943 19.8096 2.63945 19.4665C2.26947 19.1234 2.04284 18.6532 2.005 18.15L2 18V15C1.99984 14.4954 2.19041 14.0094 2.5335 13.6395C2.87659 13.2695 3.34684 13.0428 3.85 13.005L4 13H7ZM16 17C16.2549 17.0003 16.5 17.0979 16.6854 17.2728C16.8707 17.4478 16.9822 17.687 16.9972 17.9414C17.0121 18.1958 16.9293 18.4464 16.7657 18.6418C16.6021 18.8373 16.3701 18.9629 16.117 18.993L16 19H12C11.7451 18.9997 11.5 18.9021 11.3146 18.7272C11.1293 18.5522 11.0178 18.313 11.0028 18.0586C10.9879 17.8042 11.0707 17.5536 11.2343 17.3582C11.3979 17.1627 11.6299 17.0371 11.883 17.007L12 17H16ZM7 15H4V18H7V15ZM20 13C20.2652 13 20.5196 13.1054 20.7071 13.2929C20.8946 13.4804 21 13.7348 21 14C21 14.2652 20.8946 14.5196 20.7071 14.7071C20.5196 14.8946 20.2652 15 20 15H12C11.7348 15 11.4804 14.8946 11.2929 14.7071C11.1054 14.5196 11 14.2652 11 14C11 13.7348 11.1054 13.4804 11.2929 13.2929C11.4804 13.1054 11.7348 13 12 13H20ZM7 3C7.53043 3 8.03914 3.21071 8.41421 3.58579C8.78929 3.96086 9 4.46957 9 5V8C9 8.53043 8.78929 9.03914 8.41421 9.41421C8.03914 9.78929 7.53043 10 7 10H4C3.46957 10 2.96086 9.78929 2.58579 9.41421C2.21071 9.03914 2 8.53043 2 8V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H7ZM16 7C16.2549 7.00028 16.5 7.09788 16.6854 7.27285C16.8707 7.44782 16.9822 7.68695 16.9972 7.94139C17.0121 8.19584 16.9293 8.44638 16.7657 8.64183C16.6021 8.83729 16.3701 8.9629 16.117 8.993L16 9H12C11.7451 8.99972 11.5 8.90212 11.3146 8.72715C11.1293 8.55218 11.0178 8.31305 11.0028 8.05861C10.9879 7.80416 11.0707 7.55362 11.2343 7.35817C11.3979 7.16271 11.6299 7.0371 11.883 7.007L12 7H16ZM7 5H4V8H7V5ZM20 3C20.2549 3.00028 20.5 3.09788 20.6854 3.27285C20.8707 3.44782 20.9822 3.68695 20.9972 3.94139C21.0121 4.19584 20.9293 4.44638 20.7657 4.64183C20.6021 4.83729 20.3701 4.9629 20.117 4.993L20 5H12C11.7451 4.99972 11.5 4.90212 11.3146 4.72715C11.1293 4.55218 11.0178 4.31305 11.0028 4.05861C10.9879 3.80416 11.0707 3.55362 11.2343 3.35817C11.3979 3.16271 11.6299 3.0371 11.883 3.007L12 3H20Z"
+																		fill="#7E5DDD" />
+																</svg>
+															</a>
+														</li>
+													</ul>
+												</div>
+
+												<div class="rs-catalog__view">
+													<div class="all_count">Показано <span class="count">2074</span>
+														товаров
 													</div>
-													<div class="rs-catalog__category_desc">
-														<h5 class="nunito--semibold-20">Электрические скутеры</h5>
-														<h6 class="nunito--medium-14">от 100 000 ₽</h6>
-													</div>
-												</a>
+												</div>
+
+
+												<button class="rs-catalog__open-filter _rs-icon-filter">
+													<span>Показать фильтры</span>
+												</button>
+
+												<div class="rs-catalog__sortings">
+													<form action="#">
+														<select name="form[]" data-submit
+															data-pseudo-label="Сортировать:">
+															<option value="2">По новизне</option>
+															<option value="1">По популярности</option>
+														</select>
+													</form>
+												</div>
 											</div>
-											<div class="rs-catalog__category_item">
-												<a href="#">
-													<div class="rs-catalog__category_img">
-														<img src="./img/pages/product/prodict_fish.jpg" alt="">
+
+											<div class="rs-catalog__block">
+												<!-- Значение атрибута меняется при выборе способа отображения: grid || list -->
+												<div class="rs-catalog__list" data-view="list">
+													<!-- Блок для отображения товаров сеткой -->
+													<div class="rs-catalog__item">
+														<div class="product">
+															<div class="product__item">
+																<div class="product__picture">
+																	<div class="product__labels">
+																		<div class="product__label product__label_new">
+																			новинка</div>
+																		<div class="product__label product__label_sale">
+																			Выгода 13%</div>
+																	</div>
+																	<div class="product__img">
+																		<a href="#">
+																			<img src="./img/pages/product/prodict_fish.jpg"
+																				alt="">
+																		</a>
+																	</div>
+																</div>
+																<div class="product__action">
+																	<ul>
+																		<li><a href="#"
+																				class="fav-btn _rs-icon-fav"></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="product__description">
+																	<div class="product__body">
+																		<a href="#">
+																			<h6 class="nunito--semibold-18">
+																				Электровелосипед
+																				Kolyan Монстр 1200W (60V/23Ah)</h6>
+
+																			<div class="product__list">
+																				<ul>
+																					<li><span>Скорость:</span> <span>до
+																							65
+																							км/ч</span>
+																					</li>
+																					<li><span>Расстояние:</span>
+																						<span>до 65
+																							км</span>
+																					</li>
+																					<li><span>Мощность:</span>
+																						<span>1200
+																							Вт</span>
+																					</li>
+																					<li><span>Батарея:</span>
+																						<span>съемная,
+																							Li-ion, на 23
+																							ампер-часов</span>
+																					</li>
+																					<li><span>Вес:</span> <span>45
+																							кг</span>
+																					</li>
+																				</ul>
+																			</div>
+
+																			<div class="product__prices">
+																				<p
+																					class="nunito--medium-14 product__prices-old">
+																					72 400 ₽</p>
+																				<h3
+																					class="nunito--bold-24 product__prices-main">
+																					62 900 ₽</h3>
+
+																			</div>
+																		</a>
+																	</div>
+																	<div class="product__footer">
+																		<a href="#">
+																			<h6 class="nunito--bold-14">В корзину</h6>
+																			<i class="_rs-icon-cart"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
-													<div class="rs-catalog__category_desc">
-														<h5 class="nunito--semibold-20">Электрические скутеры</h5>
-														<h6 class="nunito--medium-14">от 100 000 ₽</h6>
+
+													<!-- Блок для отображения товаров списком -->
+													<div class="rs-catalog__item">
+														<div class="rs-catalog-product">
+															<div class="rs-catalog-product__item">
+																<div class="rs-catalog-product__picture">
+																	<div class="rs-catalog-product__img">
+																		<a href="#">
+																			<img src="./img/pages/product/prodict_fish.jpg"
+																				alt="">
+																		</a>
+																	</div>
+																	<div class="rs-catalog-product__action">
+																		<ul>
+																			<li><a href="#"
+																					class="fav-btn _rs-icon-fav"></a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+																<div class="rs-catalog-product__description">
+																	<h6 class="nunito--semibold-18">Электровелосипед
+																		Kolyan Монстр 1200W (60V/23Ah)</h6>
+
+																	<div class="rs-catalog-product__info_list">
+																		<ul>
+																			<li><span>Скорость:</span> <span>до 65
+																					км/ч</span>
+																			</li>
+																			<li><span>Расстояние:</span> <span>до 65
+																					км</span></li>
+																			<li><span>Мощность:</span> <span>1200
+																					Вт</span></li>
+																			<li><span>Батарея:</span> <span>съемная,
+																					Li-ion, на 23 ампер-часов</span>
+																			</li>
+																			<li><span>Вес:</span> <span>45 кг</span>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+
+																<div class="rs-catalog-product__info">
+																	<div class="rs-catalog-product__info_body">
+																		<div class="rs-catalog-product__labels">
+																			<div
+																				class="rs-catalog-product__label rs-catalog-product__label_new">
+																				Новинка</div>
+																			<div
+																				class="rs-catalog-product__label rs-catalog-product__label_sale">
+																				Выгода 13%</div>
+																		</div>
+
+																		<div class="rs-catalog-product__prices">
+																			<h3
+																				class="nunito--bold-24 rs-catalog-product__prices-main">
+																				62 900 ₽</h3>
+																			<p
+																				class="nunito--medium-14 rs-catalog-product__prices-old">
+																				72 400 ₽</p>
+																		</div>
+																	</div>
+
+																	<div class="rs-catalog-product__button">
+																		<a href="#" data-popup="#popup-feedback"
+																			class="rs-btn _btn-primary">
+																			<span>Добавить в корзину</span>
+																			<svg viewBox="-5 -5 110 110"
+																				preserveAspectRatio="none"
+																				aria-hidden="true">
+																				<path
+																					d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
+																			</svg>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
-												</a>
+												</div>
+												<div class="pagging">
+													<button disabled="" type="button"
+														class="pagging__arrow pagging__arrow_left _rs-icon-slider_arrow-left"></button>
+													<ul class="pagging__list">
+														<li class="pagging__item">
+															<a href="#" class="pagging__link _active">1</a>
+														</li>
+														<li class="pagging__item">
+															<a href="#" class="pagging__link">2</a>
+														</li>
+														<li class="pagging__item">
+															<a href="#" class="pagging__link">3</a>
+														</li>
+														<li class="pagging__item">
+															<a href="#" class="pagging__link">4</a>
+														</li>
+														<li class="pagging__item">
+															<a href="#" class="pagging__link">5</a>
+														</li>
+														<li class="pagging__item">
+															<a href="#" class="pagging__link">...</a>
+														</li>
+														<li class="pagging__item">
+															<a href="#" class="pagging__link">20</a>
+														</li>
+													</ul>
+													<button type="button"
+														class="pagging__arrow pagging__arrow_right _rs-icon-slider_arrow-right"></button>
+												</div>
 											</div>
-											<div class="rs-catalog__category_item">
-												<a href="#">
-													<div class="rs-catalog__category_img">
-														<img src="./img/pages/product/prodict_fish.jpg" alt="">
+										</div>
+
+										<div class="rs-filter">
+											<div class="rs-filter__block">
+												<form method="POST" action="#">
+													<div data-spollers class="rs-filter__spollers">
+														<div class="rs-filter__spollers_item">
+															<button type="button" data-spoller
+																class="rs-filter__spollers_title _spoller-active">Цена</button>
+															<div class="rs-filter__spollers_body">
+																<div class="range-filter">
+																	<div class="range__block">
+																		<div class="range-inputs">
+																			<div class="range-item">
+																				<label class="range-label">
+																					<input type="number"
+																						class="range-input"
+																						id="input-price__min">
+																				</label>
+																			</div>
+																			<div class="range-item">
+																				<label class="range-label">
+																					<input type="number"
+																						class="range-input"
+																						id="input-price__max">
+																				</label>
+																			</div>
+																		</div>
+																		<div class="range__button">
+																			<a href="#" class="rs-btn _btn-primary">
+																				<span>Искать</span>
+																				<svg viewBox="-5 -5 110 110"
+																					preserveAspectRatio="none"
+																					aria-hidden="true">
+																					<path
+																						d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
+																				</svg>
+																			</a>
+																		</div>
+																	</div>
+																	<div class="range-slider" id="range-price__slider">
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="rs-filter__spollers_item">
+															<button type="button" data-spoller
+																class="rs-filter__spollers_title _spoller-active">Наличие</button>
+															<div class="rs-filter__spollers_body">
+																<div class="checkbox__switch">
+																	<div class="checkbox__switch_text">Товары только в
+																		наличии</div>
+																	<div class="checkbox__switch_wrap">
+																		<input type="checkbox" name="checkbox">
+																		<span class="checkbox__switch_slider"></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="rs-filter__spollers_item">
+															<button type="button" data-spoller
+																class="rs-filter__spollers_title _spoller-active">Размер,
+																см</button>
+															<div class="rs-filter__spollers_body">
+																<div class="checkbox__filter">
+																	<div class="checkbox__block">
+																		<div class="checkbox__list">
+																			<ul class="checkbox__nav">
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">15х20</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">15х25</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">20х25</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">25х25</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">25х30</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">10х10</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">10х15</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">15х20</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">15х25</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">20х25</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">25х25</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">25х30</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">10х10</span>
+																					</label>
+																				</li>
+																				<li>
+																					<label>
+																						<input type="checkbox">
+																						<span class="checkbox"></span>
+																						<span
+																							class="checkbox-label">10х15</span>
+																					</label>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
-													<div class="rs-catalog__category_desc">
-														<h5 class="nunito--semibold-20">Электрические скутеры</h5>
-														<h6 class="nunito--medium-14">от 100 000 ₽</h6>
+
+													<div class="rs-filter__control">
+														<a href="#" class="rs-btn _btn-second">
+															<span>Сбросить фильтры</span>
+															<svg viewBox="-5 -5 110 110" preserveAspectRatio="none"
+																aria-hidden="true">
+																<path
+																	d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
+															</svg>
+														</a>
 													</div>
-												</a>
+												</form>
 											</div>
 										</div>
 									</div>
