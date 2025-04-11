@@ -217,7 +217,9 @@ section {
 	font-style: normal;
 	font-size: 14px;
 	line-height: 21px;
-	font-feature-settings: "pnum" on, "lnum" on;
+	font-feature-settings:
+		"pnum" on,
+		"lnum" on;
 	color: #6c6b6b;
 }
 
@@ -625,10 +627,10 @@ section {
 			@media (any-hover: hover) {
 				&:hover {
 					.product__picture {
-						max-height: 120px;
+						max-height: 115px;
 
 						@media (max-width: 1920px) {
-							max-height: calc(104px + (120 - 104) * ((100vw - 320px) / (1920 - 320)));
+							max-height: calc(105px + (115 - 105) * ((100vw - 320px) / (1920 - 320)));
 						}
 					}
 
@@ -646,13 +648,13 @@ section {
 		}
 
 		.product__picture {
-			max-width: 120px;
-			max-height: 120px !important;
+			max-width: 115px;
+			max-height: 115px !important;
 			margin-right: 24px;
 
 			@media (max-width: 1920px) {
-				max-width: calc(104px + (120 - 104) * ((100vw - 320px) / (1920 - 320)));
-				max-height: calc(104px + (120 - 104) * ((100vw - 320px) / (1920 - 320))) !important;
+				max-width: calc(104px + (115 - 104) * ((100vw - 320px) / (1920 - 320)));
+				max-height: calc(104px + (115 - 104) * ((100vw - 320px) / (1920 - 320))) !important;
 				margin-right: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
 			}
 
@@ -732,6 +734,48 @@ section {
 				padding: 12px 16px;
 			}
 		}
+
+		.product__labels {
+			position: relative;
+			top: 0;
+			left: 0;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			padding: 3px 0px;
+			margin-bottom: 8px;
+			z-index: 0;
+		}
+
+		.product__price {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			margin-top: 16px;
+
+			h4 {
+				font-size: 20px;
+				line-height: 26px;
+
+				@media (max-width: 1920px) {
+					font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
+					line-height: calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
+				}
+			}
+
+			h4.product__price_old {
+				font-weight: 500;
+				font-size: 15px;
+				// line-height: 19px;
+				line-height: 130%;
+				text-decoration: line-through;
+				color: #6d758d;
+
+				@media (max-width: 1920px) {
+					font-size: calc(13px + (15 - 13) * ((100vw - 320px) / (1920 - 320)));
+				}
+			}
+		}
 	}
 
 	// .product__item
@@ -804,6 +848,15 @@ section {
 		&_new {
 			background: #f26300;
 			color: #ffffff;
+		}
+
+		&_sale {
+			background-color: #dd047e;
+			color: #ffffff;
+		}
+
+		.product-small & {
+			text-transform: unset;
 		}
 	}
 
